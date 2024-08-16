@@ -1,0 +1,95 @@
+<html>
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shavacadu</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            height: 100%;
+            display: flex;
+        }
+        .half {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            font-size: 48px;
+            font-weight: bold;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .half:hover {
+            opacity: 0.7;
+        }
+        .insights {
+            background: rgba(0, 174, 239, 0.7);
+        }
+        .printing {
+            background: rgba(141, 198, 63, 0.7);
+        }
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("https://raw.githubusercontent.com/michaelsrpersaud/PositivityApp/main/avocado.jpg");
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 24px;
+            color: white;
+        }
+        .menu {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            color: white;
+        }
+    </style>
+  </head>
+<body>
+    <div class="background"></div>
+    <div class="logo"><h2>Shavacadu</h2></div>
+    <div class="menu">☰</div>
+    <div class="container">
+        <a href="https://www.bonfire.com/store/3k-miles/" class="half insights">
+            <div>
+                <h2>Store</h2>
+            </div>
+        </a>
+        <a href="./apps/index.html" class="half printing">
+            <div>
+                <h2>Applications</h2>
+            </div>
+        </a>
+    </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    const container = document.querySelector('.container');
+    const background = document.querySelector('.background');
+
+    container.addEventListener('mousemove', (e) => {
+        const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+        const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+        background.style.transform = `translate(${xAxis}px, ${yAxis}px)`;
+    });
+});
+</script>
+</body>
+</html>

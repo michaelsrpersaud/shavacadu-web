@@ -100,7 +100,6 @@
             width: 100%; /* Full width */
             height: 100%; /* Full height */
             overflow: auto; /* Enable scroll if needed */
-            background-color: rgb(0,0,0); /* Fallback color */
             background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
             padding-top: 60px;
         }
@@ -128,7 +127,49 @@
             cursor: pointer;
         }
 
+        .pricing-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
 
+        .pricing-card {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 10px;
+            width: 45%;
+        }
+
+        .pricing-card h3 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .pricing-card p {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+
+        .pricing-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .pricing-card ul li {
+            margin-bottom: 10px;
+        }
+
+        .pricing-card .select-btn {
+            padding: 10px 15px;
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .pricing-card .select-btn:hover {
+            background-color: #27ae60;
+        }
     </style>
 </head>
 <body>
@@ -138,7 +179,7 @@
             <header class="header">
                 <img src="self-control.png" alt="Positivity Logo" width="50" height="50">
                 <h1>Stay Positive!</h1>
-                <button class="cta-button">ADD TO CHROME - IT'S FREE!</button>
+                <button class="cta-button" id="chromeShopBtn">Add to Chrome</button>
             </header>
 
             <section class="hero">
@@ -170,7 +211,7 @@
                 <h2>Unleash your mental well-being and get more insights with Positivity.</h2>
                 <div>
                     <h3>About</h3>
-                    <p>Plans and Pricing</p>
+                    <p><button class="cta-button" id="pricingBtn">PLANS & PRICING</button></p>
                     <p>Positivity</p>
                     <p>Roadmap</p>
                     <!-- Add more links as needed -->
@@ -187,44 +228,89 @@
         <div class="border-section"></div>
     </div>
 
+    <!-- The Message Us Modal -->
+    <div id="messageUsModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <!-- Embedded Google Form -->
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdYCREXJFOBj-S7SqTBaAdJTaEk72BbeDXcNY9SiVFhZSxLPA/viewform?embedded=true"
+                    width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
+    </div>
 
-        <!-- The Modal -->
-        <div id="messageUsModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <!-- Embedded Google Form -->
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdYCREXJFOBj-S7SqTBaAdJTaEk72BbeDXcNY9SiVFhZSxLPA/viewform?embedded=true"
-                        width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    <!-- The Pricing Modal -->
+    <div id="pricingModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Choose Your Plan</h2>
+
+            <!-- Pricing Plans -->
+            <div class="pricing-container">
+                <!-- Basic Plan -->
+                <div class="pricing-card">
+                    <h3>Free Plan</h3>
+                    <p>FREE</p>
+                    <ul>
+                        <li>200+ influenced words</li>
+                        <li>Colour highlights</li>
+                        <li>Word Stats per page</li>
+                    </ul>
+                    <button class="select-btn">Select Basic Plan</button>
+                </div>
+
+                <!-- Premium Plan -->
+                <div class="pricing-card">
+                    <h3>Premium Plan</h3>
+                    <p>$12/year</p>
+                    <ul>
+                        <li>x2 Word list</li>
+                        <li>Account Management</li>
+                        <li>Dashboard with thrends</li>
+                        <li>Everything from Free</li>
+                    </ul>
+                    <button class="select-btn">Select Premium Plan</button>
+                </div>
             </div>
         </div>
+    </div>
 
-        <script>
-            // Get the modal
-            const modal = document.getElementById('messageUsModal');
+    <script>
+        // Get the modals
+        const messageUsModal = document.getElementById('messageUsModal');
+        const pricingModal = document.getElementById('pricingModal');
 
-            // Get the button that opens the modal
-            const btn = document.getElementById('messageUsBtn');
+        // Get the buttons that open the modals
+        const messageUsBtn = document.getElementById('messageUsBtn');
+        const pricingBtn = document.getElementById('pricingBtn');
 
-            // Get the <span> element that closes the modal
-            const span = document.getElementsByClassName('close')[0];
+        // Get the <span> elements that close the modals
+        const closeButtons = document.getElementsByClassName('close');
 
-            // When the user clicks the button, open the modal
-            btn.onclick = function() {
-                modal.style.display = "block";
+        // When the user clicks the buttons, open the respective modal
+        messageUsBtn.onclick = function() {
+            messageUsModal.style.display = "block";
+        }
+
+        pricingBtn.onclick = function() {
+            pricingModal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        for (let i = 0; i < closeButtons.length; i++) {
+            closeButtons[i].onclick = function() {
+                this.closest('.modal').style.display = "none";
             }
+        }
 
-            // When the user clicks on <span> (x), close the modal
-            span.onclick = function() {
-                modal.style.display = "none";
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target === messageUsModal) {
+                messageUsModal.style.display = "none";
             }
-
-            // When the user clicks anywhere outside of the modal, close it
-            window.onclick = function(event) {
-                if (event.target === modal) {
-                    modal.style.display = "none";
-                }
+            if (event.target === pricingModal) {
+                pricingModal.style.display = "none";
             }
-        </script>
-
+        }
+    </script>
 </body>
 </html>

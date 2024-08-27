@@ -4,113 +4,169 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Positivity App powered by Shavacadu.com</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #FFC107;
+            --text-color: #333;
+            --background-color: #f0f8ff;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: lightgray; /* Light gray background for the whole page */
-            color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            height: 100vh;
-            box-sizing: border-box;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
         }
 
         .container {
-            height: 100%;
-            width: 70%;
+            max-width: 1200px;
             margin: 0 auto;
-            margin-left: 15%;
-            margin-right: 15%;
-        }
-
-        .border-section {
-            flex: 1;
-            background-color: lightgray; /* Light gray for outer sections */
-        }
-
-        .content-section {
-            flex: 2;
-            background-color: lightgreen; /* Light green for the central content section */
-            padding: 20px;
-            box-sizing: border-box;
+            padding: 0 20px;
         }
 
         .header {
-            background-color: #e74c3c;
+            background-color: var(--primary-color);
             color: white;
-            padding: 1rem;
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 1rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .logo img {
+            margin-right: 10px;
         }
 
         .cta-button {
-            background-color: #3498db;
-            color: white;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
             padding: 0.5rem 1rem;
             border: none;
-            border-radius: 5px;
+            border-radius: 25px;
             cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #FFD54F;
+            transform: translateY(-2px);
         }
 
         .hero {
             text-align: center;
-            padding: 4rem 2rem;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
         }
 
         .hero h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
+            color: var(--primary-color);
         }
 
         .hero p {
             font-size: 1.2rem;
             margin-bottom: 2rem;
-        }
-
-        .reviews,
-        .stats,
-        .attributions {
-            padding: 2rem;
-            text-align: center;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .reviews {
-            background-color: #f9f9f9;
-        }
-
-        .footer {
-            background-color: #e74c3c;
-            color: white;
-            padding: 2rem;
+            background-color: white;
+            padding: 4rem 0;
             text-align: center;
         }
 
-        /* Modal Styles */
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .review {
+            background-color: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .review:hover {
+            transform: translateY(-5px);
+        }
+
+        .stats {
+            padding: 4rem 0;
+            text-align: center;
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+
         .modal {
-            display: none; /* Hidden by default */
-            position: fixed; /* Stay in place */
-            z-index: 1; /* Sit on top */
+            display: none;
+            position: fixed;
+            z-index: 1;
             left: 0;
             top: 0;
-            width: 100%; /* Full width */
-            height: 100%; /* Full height */
-            overflow: auto; /* Enable scroll if needed */
-            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
             padding-top: 60px;
         }
 
         .modal-content {
             background-color: #fefefe;
-            margin: 5% auto; /* 15% from the top and centered */
+            margin: 5% auto;
             padding: 20px;
             border: 1px solid #888;
-            width: 80%; /* Could be more or less, depending on screen size */
+            width: 80%;
             max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
         .close {
@@ -138,11 +194,18 @@
             padding: 20px;
             border-radius: 10px;
             width: 45%;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
         }
 
         .pricing-card h3 {
             margin: 0;
             font-size: 24px;
+            color: var(--primary-color);
         }
 
         .pricing-card p {
@@ -161,76 +224,86 @@
 
         .pricing-card .select-btn {
             padding: 10px 15px;
-            background-color: #2ecc71;
+            background-color: var(--primary-color);
             color: white;
             border: none;
+            border-radius: 25px;
             cursor: pointer;
+            transition: all 0.3s ease;
         }
 
         .pricing-card .select-btn:hover {
-            background-color: #27ae60;
-        }
-        
-        .modal-content h2 {
-            text-align: center; /* Centers the text horizontally */
+            background-color: #45a049;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="border-section"></div>
-        <div class="content-section">
-            <header class="header">
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo">
                 <img src="self-control.png" alt="Positivity Logo" width="50" height="50">
-                <h1>Stay Positive!</h1>
-                <button class="cta-button" id="chromeShopBtn">Add to Chrome</button>
-            </header>
+                <span>Stay Positive!</span>
+            </div>
+            <button class="cta-button" id="chromeShopBtn">
+                <i class="fab fa-chrome"></i> Add to Chrome
+            </button>
+        </div>
+    </header>
 
-            <section class="hero">
-                <p>Know how much positive or negative influence each site has with visual aiding.</p>
-                <button class="cta-button" id="messageUsBtn">MESSAGE US</button>
-            </section>
+    <section class="hero">
+        <div class="container">
+            <h1>Boost Your Positivity</h1>
+            <p>Know how much positive or negative influence each site has with visual aiding. Transform your browsing experience into a journey of positivity.</p>
+            <button class="cta-button" id="messageUsBtn">
+                <i class="far fa-envelope"></i> MESSAGE US
+            </button>
+        </div>
+    </section>
 
-            <section class="reviews">
+    <section class="reviews">
+        <div class="container">
+            <h2>What Our Users Say</h2>
+            <div class="review-grid">
                 <div class="review">
+                    <i class="fas fa-quote-left"></i>
                     <p>"I never knew that browsing could impact my positivity."</p>
                     <p>- Josh P.</p>
                 </div>
                 <div class="review">
+                    <i class="fas fa-quote-left"></i>
                     <p>"Great app, color indicators make it easy."</p>
                     <p>- Bibi F.</p>
                 </div>
                 <div class="review">
+                    <i class="fas fa-quote-left"></i>
                     <p>"Freaking amazing, so insightful!"</p>
                     <p>- Stephen R.</p>
                 </div>
-            </section>
-
-            <section class="stats">
-                <h2>Positivity Analysis.</h2>
-                <p>Positivity analyses your activity and shows how much influence you may be exposed to.</p>
-            </section>
-
-            <footer class="footer">
-                <h2>Unleash your mental well-being and get more insights with Positivity.</h2>
-                <div>
-                    <h3>About</h3>
-                    <p><button class="cta-button" id="pricingBtn">PLANS & PRICING</button></p>
-                    <p>Positivity</p>
-                    <p>Roadmap</p>
-                    <!-- Add more links as needed -->
-                </div>
-                <p>&copy; 2024 Shavacadu</p>
-            </footer>
-            <section class="attributions">
-                <h3>Positivity Attributions.</h3>
-                <p>Image attributions<br/>Icons:
-                    <a href="https://www.flaticon.com/free-icons/positive-attitude" title="positive-attitude icons">Positive-attitude icons created by Freepik - Flaticon</a>
-                </p>
-            </section>
+            </div>
         </div>
-        <div class="border-section"></div>
-    </div>
+    </section>
+
+    <section class="stats">
+        <div class="container">
+            <h2>Positivity Analysis</h2>
+            <p>Positivity analyzes your activity and shows how much influence you may be exposed to, helping you make more informed decisions about your online habits.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div>
+                <h3>Unleash your mental well-being with Positivity</h3>
+                <button class="cta-button" id="pricingBtn">PLANS & PRICING</button>
+            </div>
+            <div class="footer-links">
+                <a href="#">About</a>
+                <a href="#">Positivity</a>
+                <a href="#">Roadmap</a>
+            </div>
+        </div>
+        <p>&copy; 2024 Shavacadu</p>
+    </footer>
 
     <!-- The Message Us Modal -->
     <div id="messageUsModal" class="modal">
@@ -246,30 +319,25 @@
     <div id="pricingModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <h2 style="text-align: center;">Choose Your Plan</h2>
-
-            <!-- Pricing Plans -->
+            <h2>Choose Your Plan</h2>
             <div class="pricing-container">
-                <!-- Basic Plan -->
                 <div class="pricing-card">
                     <h3>Free Plan</h3>
                     <p>FREE</p>
                     <ul>
-                        <li>200+ influenced words</li>
-                        <li>Colour highlights</li>
-                        <li>Word Stats per page</li>
+                        <li><i class="fas fa-check"></i> 200+ influenced words</li>
+                        <li><i class="fas fa-check"></i> Colour highlights</li>
+                        <li><i class="fas fa-check"></i> Word Stats per page</li>
                     </ul>
                     <button class="select-btn">Select Basic Plan</button>
                 </div>
-
-                <!-- Premium Plan -->
                 <div class="pricing-card">
-                    <h3>Premium Plan - coming soon</h3>
+                    <h3>Premium Plan</h3>
                     <p>$24/year</p>
                     <ul>
-                        <li>Min x3 Word lists</li>
-                        <li>Account Management</li>
-                        <li>Everything from Free</li>
+                        <li><i class="fas fa-check"></i> Min x3 Word lists</li>
+                        <li><i class="fas fa-check"></i> Account Management</li>
+                        <li><i class="fas fa-check"></i> Everything from Free</li>
                     </ul>
                     <button class="select-btn">Select Premium Plan</button>
                 </div>
@@ -278,18 +346,13 @@
     </div>
 
     <script>
-        // Get the modals
+        // Modal functionality (same as before)
         const messageUsModal = document.getElementById('messageUsModal');
         const pricingModal = document.getElementById('pricingModal');
-
-        // Get the buttons that open the modals
         const messageUsBtn = document.getElementById('messageUsBtn');
         const pricingBtn = document.getElementById('pricingBtn');
-
-        // Get the <span> elements that close the modals
         const closeButtons = document.getElementsByClassName('close');
 
-        // When the user clicks the buttons, open the respective modal
         messageUsBtn.onclick = function() {
             messageUsModal.style.display = "block";
         }
@@ -298,14 +361,12 @@
             pricingModal.style.display = "block";
         }
 
-        // When the user clicks on <span> (x), close the modal
         for (let i = 0; i < closeButtons.length; i++) {
             closeButtons[i].onclick = function() {
                 this.closest('.modal').style.display = "none";
             }
         }
 
-        // When the user clicks anywhere outside of the modal, close it
         window.onclick = function(event) {
             if (event.target === messageUsModal) {
                 messageUsModal.style.display = "none";

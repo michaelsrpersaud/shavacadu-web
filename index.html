@@ -1,6 +1,6 @@
-<html>
-  <head>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shavacadu</title>
@@ -13,6 +13,7 @@
         .container {
             height: 100%;
             display: flex;
+            flex-direction: column;
         }
         .half {
             flex: 1;
@@ -21,7 +22,7 @@
             align-items: center;
             text-decoration: none;
             color: white;
-            font-size: 48px;
+            font-size: 24px;
             font-weight: bold;
             text-align: center;
             transition: all 0.3s ease;
@@ -36,7 +37,7 @@
             background: rgba(141, 198, 63, 0.7);
         }
         .background {
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
@@ -48,20 +49,40 @@
         }
         .logo {
             position: absolute;
-            top: 20px;
-            left: 20px;
-            font-size: 24px;
+            top: 10px;
+            left: 10px;
+            font-size: 18px;
             color: white;
         }
         .menu {
             position: absolute;
-            top: 20px;
-            right: 20px;
+            top: 10px;
+            right: 10px;
             font-size: 24px;
             color: white;
         }
+
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row;
+            }
+            .half {
+                font-size: 36px;
+            }
+            .logo {
+                top: 20px;
+                left: 20px;
+                font-size: 24px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .half {
+                font-size: 48px;
+            }
+        }
     </style>
-  </head>
+</head>
 <body>
     <div class="background"></div>
     <div class="logo"><h2>Shavacadu</h2></div>
@@ -78,16 +99,28 @@
             </div>
         </a>
     </div>
-
 <script>
 document.addEventListener('DOMContentLoaded', (event) => {
     const container = document.querySelector('.container');
     const background = document.querySelector('.background');
 
-    container.addEventListener('mousemove', (e) => {
+    function handleMouseMove(e) {
         const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
         const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
         background.style.transform = `translate(${xAxis}px, ${yAxis}px)`;
+    }
+
+    if (window.matchMedia("(min-width: 768px)").matches) {
+        container.addEventListener('mousemove', handleMouseMove);
+    }
+
+    window.addEventListener('resize', () => {
+        if (window.matchMedia("(min-width: 768px)").matches) {
+            container.addEventListener('mousemove', handleMouseMove);
+        } else {
+            container.removeEventListener('mousemove', handleMouseMove);
+            background.style.transform = 'none';
+        }
     });
 });
 </script>

@@ -132,9 +132,10 @@
             const pricingBtn = document.getElementById('pricingBtn');
             const closeButtons = document.getElementsByClassName('close');
 
-            messageUsBtn.onclick = function() {
-                messageUsModal.style.display = "block";
-            }
+
+            document.getElementById('messageUsBtn').addEventListener('click', function() {
+                window.location.href = 'https://shavacadu.com/apps/help.html';
+            });
 
             pricingBtn.onclick = function() {
                 pricingModal.style.display = "block";

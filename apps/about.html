@@ -224,3 +224,86 @@
   </footer>
 </body>
 </html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Page</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Placeholder for header -->
+    <div id="header-placeholder"></div>
+
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading header:', error));
+    </script>
+
+    <!-- Page-specific content -->
+    <div class="page">
+      <div class="container">
+        <h1><strong>About</strong></h1>
+        <p><strong>Positivity Evaluator</strong></p>
+        <p>Cultivate a Positive Online Experience</p>
+        <p>
+          In today's digital world, the content we consume can significantly impact our mood, thoughts, and overall well-being. The Positivity Evaluator is your essential tool for fostering a positive mindset while browsing the web.
+        </p>
+        <h4>Key Features:</h4>
+        <p>* Real-time Analysis: Evaluates web pages as you browse, providing instant feedback on content positivity.</p>
+        <p>* Visual Indicator: Easy-to-understand color-coded system shows the positivity level of each webpage.</p>
+        <p>* Customizable Thresholds: Set your own standards for what constitutes positive, neutral, or negative content.</p>
+        <p>* Reports: Get insights into your browsing patterns.</p>
+        <p>* Privacy-Focused: All analysis is done locally - your browsing data stays on your device.</p>
+        <h4>How It Works:</h4>
+        <p>
+          The Positivity Evaluator uses advanced algorithms to analyze the sentiment of web content. It provides a simple visual cue - changes color from green (highly positive) to red (highly negative) with an optional changeable yellow for neutral pages - allowing you to make informed decisions about the content you engage with.
+        </p>
+        <h4>Benefits:</h4>
+        <p>* Improve Mental Health: Consciously choose more positive content to boost your mood and outlook.</p>
+        <p>* Increase Awareness: Become more mindful of the digital environment you're exposing yourself to.</p>
+        <p>* Reduce Stress: Easily identify and avoid negativity-inducing content.</p>
+        <p>* Enhance Well-being: Curate a more uplifting and inspiring online experience.</p>
+        <h4>The Positivity Evaluator app will be helpful to:</h4>
+        <ul>
+          <li>Mental Health Conscious Individuals</li>
+          <li>Parents and Educators</li>
+          <li>Professionals in High-Stress Fields</li>
+          <li>Social Media Managers and Content Creators</li>
+          <li>Individuals Recovering from Anxiety or Depression</li>
+          <li>Productivity-Focused Professionals</li>
+          <li>Digital Wellness Enthusiasts</li>
+          <li>News Consumers Seeking Balance</li>
+          <li>Personal Development Enthusiasts</li>
+          <li>Empaths or Highly Sensitive Persons</li>
+        </ul>
+        <p>
+          The Positivity Evaluator empowers you to take control of your digital diet. By guiding you toward more positive content, it helps create a healthier, more optimistic online experience. Start cultivating positivity in your digital life today!
+        </p>
+      </div>
+    </div>
+
+    <!-- Placeholder for footer -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    </script>
+</body>
+</html>

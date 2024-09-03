@@ -30,6 +30,9 @@
             <button class="cta-button" id="messageUsBtn">
                 <i class="far fa-envelope"></i> MESSAGE US
             </button>
+            <button class="cta-button" id="pricingBtn">
+                <i class="fas fa-tags"></i> PLANS & PRICING
+            </button>
         </div>
     </section>
 
@@ -63,10 +66,6 @@
         </div>
     </section>
 
-
-
-
-
     <!-- Placeholder for footer -->
     <div id="footer-placeholder"></div>
 
@@ -79,83 +78,16 @@
             .catch(error => console.error('Error loading footer:', error));
     </script>
 
+    <script>
+        // Handle redirection for buttons
+        document.getElementById('messageUsBtn').addEventListener('click', function() {
+            window.location.href = 'https://shavacadu.com/apps/help.html';
+        });
 
-
-
-        <!-- The Message Us Modal -->
-        <div id="messageUsModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <!-- Embedded Google Form -->
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdYCREXJFOBj-S7SqTBaAdJTaEk72BbeDXcNY9SiVFhZSxLPA/viewform?embedded=true"
-                        width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-            </div>
-        </div>
-
-        <!-- The Pricing Modal -->
-        <div id="pricingModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2>Choose Your Plan</h2>
-                <div class="pricing-container">
-                    <div class="pricing-card">
-                        <h3>Free Plan</h3>
-                        <p>FREE</p>
-                        <ul>
-                            <li><i class="fas fa-check"></i> 200+ influenced words</li>
-                            <li><i class="fas fa-check"></i> Colour highlights</li>
-                            <li><i class="fas fa-check"></i> Word Stats per page</li>
-                        </ul>
-                        <p>FREE in the Google Store!</p>
-                    </div>
-                    <div class="pricing-card">
-                        <h3>Premium Plan</h3>
-                        <p>$24/year</p>
-                        <ul>
-                            <li><i class="fas fa-check"></i> Min x3 Word lists</li>
-                            <li><i class="fas fa-check"></i> Account Management</li>
-                            <li><i class="fas fa-check"></i> Everything from Free</li>
-                        </ul>
-                        <a href="premium.html">
-                          <button class="select-btn">Select Premium Plan</button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <script>
-            // Modal functionality (same as before)
-            const messageUsModal = document.getElementById('messageUsModal');
-            const pricingModal = document.getElementById('pricingModal');
-            const messageUsBtn = document.getElementById('messageUsBtn');
-            const pricingBtn = document.getElementById('pricingBtn');
-            const closeButtons = document.getElementsByClassName('close');
-
-
-            document.getElementById('messageUsBtn').addEventListener('click', function() {
-                window.location.href = 'https://shavacadu.com/apps/help.html';
-            });
-
-            pricingBtn.onclick = function() {
-                pricingModal.style.display = "block";
-            }
-
-            for (let i = 0; i < closeButtons.length; i++) {
-                closeButtons[i].onclick = function() {
-                    this.closest('.modal').style.display = "none";
-                }
-            }
-
-            window.onclick = function(event) {
-                if (event.target === messageUsModal) {
-                    messageUsModal.style.display = "none";
-                }
-                if (event.target === pricingModal) {
-                    pricingModal.style.display = "none";
-                }
-            }
-        </script>
+        document.getElementById('pricingBtn').addEventListener('click', function() {
+            window.location.href = 'https://shavacadu.com/apps/plans.html';
+        });
+    </script>
 
 </body>
 </html>

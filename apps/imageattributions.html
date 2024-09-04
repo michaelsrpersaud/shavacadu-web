@@ -1,13 +1,17 @@
   <!DOCTYPE html>
   <html lang="en">
   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>New Page</title>
-
-      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-      <link rel="stylesheet" href="styles.css">
+    <title>Image Attributions!</title>
+    <!-- Placeholder for the rest of the head content -->
+    <script>
+        fetch('head-include.html')
+            .then(response => response.text())
+            .then(data => {
+                const head = document.getElementsByTagName('head')[0];
+                head.insertAdjacentHTML('beforeend', data);
+            })
+            .catch(error => console.error('Error loading head content:', error));
+    </script>
   </head>
   <body>
       <!-- Placeholder for header -->

@@ -132,7 +132,7 @@ body {
     flex: 1;
 }
 
-.footer-right {
+.footer-right, .footer-left {
     display: flex;
     flex-direction: column;
     align-items: flex-start;

@@ -108,9 +108,14 @@ body {
 .stats {
     padding: 4rem 0;
     text-align: center;
-    background-color: var(--background-color);
+    background-color: var(--primary-color); /* Ensure this is a darker color so white text is visible */
     color: white;
 }
+
+.stats h2, .stats p {
+    color: white; /* Explicitly setting white color for h2 and p inside .stats */
+}
+
 
 .footer {
     background-color: #333; /* Adjust background color as needed */

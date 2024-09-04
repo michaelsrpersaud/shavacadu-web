@@ -1,11 +1,13 @@
 <html lang="en">
 <head>
   <title>Home Page</title> <!-- Set the title specific to this page -->
+  <!-- Placeholder for the rest of the head content -->
   <script>
       fetch('head-include.html')
           .then(response => response.text())
           .then(data => {
-              document.write(data);
+              const head = document.getElementsByTagName('head')[0];
+              head.insertAdjacentHTML('beforeend', data);
           })
           .catch(error => console.error('Error loading head content:', error));
   </script>

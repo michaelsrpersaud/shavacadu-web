@@ -112,6 +112,11 @@ body {
     color: white;
 }
 
+.stats-colour{
+  color:#4caf50;
+}
+
+
 .footer {
     background-color: #333; /* Adjust background color as needed */
     color: white;

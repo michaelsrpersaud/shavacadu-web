@@ -113,7 +113,7 @@ body {
 }
 
 .stats-colour{
-  color: #fffaf0;
+    background-color: var(--background-color);
 }
 
 

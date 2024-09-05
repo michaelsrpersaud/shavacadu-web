@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <title>Terms of Service</title>
+    <!-- Placeholder for the rest of the head content -->
+    <script>
+        fetch('head-include.html')
+            .then(response => response.text())
+            .then(data => {
+                const head = document.getElementsByTagName('head')[0];
+                head.insertAdjacentHTML('beforeend', data);
+            })
+            .catch(error => console.error('Error loading head content:', error));
+    </script>
+  </head>
+  <body>
+      <!-- Placeholder for header -->
+      <div id="header-placeholder"></div>
+
+      <script>
+          fetch('header.html')
+              .then(response => response.text())
+              .then(data => {
+                  document.getElementById('header-placeholder').innerHTML = data;
+              })
+              .catch(error => console.error('Error loading header:', error));
+      </script>
+
+      <!-- Page-specific content -->
+      <div class="page">
+
+        <div class="translations-content-container">
+          <div class="container">
+            <div class="tab-content translations-content-item en visible" id="en">
+              <h1>Terms of Service</h1>
+              <h2><strong>Terms of Service</strong></h2>
+                <p><strong>Effective Date:</strong> 2024-08-30</p>
+                <p>Welcome to <strong>Positivity Evaluator</strong>! These Terms of Service ("Terms") govern your access to and use of our extension and services, including any updates, new features, or changes made to the extension (collectively, the "Service").</p>
+                <p>By using the Positivity Evaluator extension, you agree to be bound by these Terms, our Privacy Policy, and any applicable laws and regulations. If you do not agree to these Terms, please do not use our Service.</p>
+                <h3>1. <strong>Acceptance of Terms</strong></h3>
+                <p>By installing, accessing, or using the Positivity Evaluator, you accept and agree to be bound by these Terms of Service. If you do not agree with these terms, please uninstall the extension and refrain from using it.</p>
+                <h3>2. <strong>Modifications to the Terms</strong></h3>
+                <p>We may revise these Terms from time to time. We will provide notice of such changes, including the date they become effective. Your continued use of the Service after the revised Terms go into effect constitutes your acceptance of the changes.</p>
+                <h3>3. <strong>Service Overview</strong></h3>
+                <p>Positivity Evaluator analyzes web content for positivity and provides a visual indication of the positivity level of the content you browse. It helps users manage their positivity and well-being by reviewing text content in web pages.</p>
+                <h3>4. <strong>Use of the Service</strong></h3>
+                <p>You may use Positivity Evaluator solely for personal, non-commercial purposes. You agree to:</p>
+                <ul>
+                <li>Comply with all applicable laws and regulations while using the Service.</li>
+                <li>Not use the Service for any illegal or unauthorized purposes.</li>
+                <li>Not attempt to reverse-engineer, modify, or otherwise tamper with the extension.</li>
+                </ul>
+                <h3>5. <strong>Privacy and Data Usage</strong></h3>
+                <p>We are committed to protecting your privacy. By using Positivity Evaluator, you agree to our <a rel="noopener">Privacy Policy</a> and consent to the collection, storage, and use of your information as outlined in that policy.</p>
+                <p><strong>Data Collected:</strong></p>
+                <ul>
+                <li>We may collect anonymized data for usage analytics and improvements.</li>
+                <li>When linked with your Google account (with your explicit permission via OAuth), we may access your profile information such as email address for personalization purposes.</li>
+                </ul>
+                <p>We will never sell or misuse your data. For more information, refer to our full Privacy Policy.</p>
+                <h3>6. <strong>Account and User Information</strong></h3>
+                <p>Positivity Evaluator may require you to link your Google account in order to access certain features. If you do so, you are responsible for maintaining the security of your account and keeping your information accurate.</p>
+                <h3>7. <strong>Permissions</strong></h3>
+                <p>Positivity Evaluator requires the following permissions:</p>
+                <ul>
+                <li><strong>Host Permissions:</strong> To analyze web content from sites such as shavacadu.com, github.com, and localhost.</li>
+                <li><strong>Active Tab Permission:</strong> To scan the active tab for content analysis.</li>
+                <li><strong>Storage Permission:</strong> To store user preferences, such as selected themes and positivity thresholds.</li>
+                </ul>
+                <p>All permissions are essential for the core functionality of the app. You can review and manage these permissions in your browser's settings.</p>
+                <h3>8. <strong>Content and Intellectual Property</strong></h3>
+                <p>All rights, title, and interest in the Service, including its design, graphics, software, and features, are owned by Shavacadu.com. You are not permitted to copy, modify, distribute, or otherwise exploit any part of the Service without prior written consent.</p>
+                <h3>9. <strong>Third-Party Links</strong></h3>
+                <p>Our extension may contain links to third-party websites, including our partner site, Shavacadu.com. We are not responsible for the content or practices of any third-party sites. Clicking on such links is done at your own risk.</p>
+                <h3>10. <strong>Termination</strong></h3>
+                <p>We may terminate or suspend your access to the Service at any time, with or without cause, including for violations of these Terms. Upon termination, you must cease using the Service and uninstall the extension from your browser.</p>
+                <h3>11. <strong>Disclaimer of Warranties</strong></h3>
+                <p>The Service is provided "as-is" without any warranties of any kind. We do not warrant that the Service will meet your requirements or that it will be error-free, uninterrupted, or free from malicious software or defects.</p>
+                <h3>12. <strong>Limitation of Liability</strong></h3>
+                <p>To the fullest extent permitted by applicable law, we will not be liable for any damages arising out of or related to your use or inability to use the Service, including direct, indirect, incidental, or consequential damages.</p>
+                <h3>13. <strong>Indemnification</strong></h3>
+                <p>You agree to indemnify and hold harmless Shavacadu.com and its affiliates from any claims, liabilities, damages, or expenses arising out of your use of the Service, violation of these Terms, or infringement of any rights of a third party.</p>
+                <h3>14. <strong>Governing Law</strong></h3>
+                <p>These Terms will be governed by and construed in accordance with the laws of CANADA/ONTARIO, without regard to its conflict of law principles. Any disputes arising under or related to these Terms shall be resolved exclusively in the courts of ONTARIO, CANADA.</p>
+                <h3>15. <strong>Contact Us</strong></h3>
+                <p>If you have any questions about these Terms, please contact us at: https://shavacadu.com/apps/help <br /><strong>Website:</strong> shavacadu.com</p>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Placeholder for footer -->
+      <div id="footer-placeholder"></div>
+
+      <script>
+          fetch('footer.html')
+              .then(response => response.text())
+              .then(data => {
+                  document.getElementById('footer-placeholder').innerHTML = data;
+              })
+              .catch(error => console.error('Error loading footer:', error));
+      </script>
+  </body>
+  </html>

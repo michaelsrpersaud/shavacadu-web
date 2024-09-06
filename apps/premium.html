@@ -13,17 +13,30 @@
     </script>
   </head>
   <body>
-      <!-- Placeholder for header -->
-      <div id="header-placeholder"></div>
+    <!-- Placeholder for header -->
+    <div id="header-placeholder"></div>
 
-      <script>
-          fetch('header.html')
-              .then(response => response.text())
-              .then(data => {
-                  document.getElementById('header-placeholder').innerHTML = data;
-              })
-              .catch(error => console.error('Error loading header:', error));
-      </script>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+
+                // Attach event listener after header is loaded
+                const chromeShopBtn = document.getElementById('chromeShopBtn');
+                if (chromeShopBtn) {
+                    chromeShopBtn.addEventListener('click', function() {
+                        // Use the central redirection function
+                        redirectToChromeWebStore();
+                    });
+                }
+            })
+            .catch(error => console.error('Error loading header:', error));
+    </script>
+
+    <!-- Include the centralized script -->
+    <script src="webstorelink.js"></script>
+    <!-- End header -->
 
       <!-- Page-specific content -->
       <div class="page">

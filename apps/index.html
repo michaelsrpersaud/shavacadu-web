@@ -17,21 +17,16 @@
     <div id="header-placeholder"></div>
 
     <script>
-      fetch('header.html')
-          .then(response => response.text())
-          .then(data => {
-              document.getElementById('header-placeholder').innerHTML = data;
-
-              // Now that the header has been loaded, we can add the event listener
-              const chromeShopBtn = document.getElementById('chromeShopBtn');
-              if (chromeShopBtn) {
-                  chromeShopBtn.addEventListener('click', function() {
-                      window.location.href = 'https://chrome.google.com/webstore/detail/bjlppgafakigmpbjlodkdfaefkandphp';
-                  });
-              }
-          })
-          .catch(error => console.error('Error loading header:', error));
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading header:', error));
     </script>
+
+    <!-- Include the centralized script -->
+    <script src="webstorelink.js"></script>
 
     <!-- Page-specific content -->
     <section class="hero">

@@ -18,7 +18,18 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    padding-left: 20%;
+    padding-right: 20%;
 }
+
+/* Adjust for mobile devices (viewport width below 768px) */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
 
 .header {
     background-color: var(--primary-color);

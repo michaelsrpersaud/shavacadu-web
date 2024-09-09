@@ -19,7 +19,7 @@
             color: white;
             text-align: center;
             padding: 70px 20px;
-            opacity: 0.6; /* Make the banner semi-transparent */
+            opacity: 0.6;
         }
         .banner h1 {
             margin: 0;
@@ -50,11 +50,14 @@
             display: flex;
             justify-content: space-between;
             margin: 40px 0;
+            flex-wrap: wrap; /* Ensure wrapping on smaller screens */
         }
         .feature {
             flex: 1;
             text-align: center;
             padding: 20px;
+            margin: 10px;
+            min-width: 250px; /* Ensure boxes don't shrink too much on small screens */
         }
         .feature-icon {
             width: 100px;
@@ -67,34 +70,34 @@
         }
         /* Apply the background image for the first feature icon */
         .feature:nth-child(1) .feature-icon {
-            background-image: url('./apps/self-control.png'); /* Set the image for PositivityApp */
+            background-image: url('./apps/self-control.png');
         }
         .feature:nth-child(2) .feature-icon {
-            background-image: url('avocado.jpg'); /* Set the image for Governance */
+            background-image: url('avocado.jpg');
         }
         .feature:nth-child(3) .feature-icon {
-            background-image: url('UltraRunner_playstore.png'); /* Set the image for Governance */
+            background-image: url('UltraRunner_playstore.png');
         }
         .centered-text {
             text-align: center;
         }
-
         .split-content {
             display: flex;
             margin: 40px 0;
+            flex-wrap: wrap;
         }
         .split-item {
             flex: 1;
             padding: 20px;
             display: flex;
             justify-content: center;
-            height: 50px; /* Add a height to ensure vertical centering */
+            align-items: center; /* Align text vertically */
+            height: 50px;
             text-align: center;
         }
         .split-item a:hover {
             text-decoration: underline;
         }
-
         .footer {
             background-color: #333;
             padding: 20px;
@@ -109,16 +112,40 @@
         .footer-section {
             flex: 1;
             padding: 0 20px;
-            color: #333; /* Change text color to match the white background */
+            color: #fff; /* Change text color to white */
         }
-        /* Make the hyperlink white */
         .footer-section a {
             color: white;
             text-decoration: none;
         }
-        /* Add hover effect for the link if desired */
         .footer-section a:hover {
             text-decoration: underline;
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .banner h1 {
+                font-size: 2em;
+            }
+            .features {
+                flex-direction: column; /* Stack features vertically */
+            }
+            .split-content {
+                flex-direction: column; /* Stack the split content */
+            }
+            .split-item {
+                height: auto; /* Allow flexible height for content */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .banner h1 {
+                font-size: 1.8em;
+            }
+            .button {
+                font-size: 14px;
+                padding: 10px 24px;
+            }
         }
     </style>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7662493193739998"
@@ -127,7 +154,7 @@
 </head>
 <body>
     <div class="banner">
-        <h1>Shavacadu</h1>
+        <h1><b>Shavacadu</b></h1>
         <p>Providing Innovative Apps</p>
     </div>
 

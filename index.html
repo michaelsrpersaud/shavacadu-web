@@ -3,142 +3,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-adsense-account" content="ca-pub-7662493193739998">
     <title>Shavacadu</title>
-    <link rel="icon" type="image/x-icon" href="positivity.ico">
     <style>
-        body, html {
-            height: 100%;
-            margin: 0;
+        body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f0f8ff;
         }
-        .container {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-        .half {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
-            color: white;
-            font-size: 24px;
-            font-weight: bold;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-        .half:hover {
-            opacity: 0.7;
-        }
-        .insights {
-            background: rgba(0, 174, 239, 0.7);
-        }
-        .printing {
-            background: rgba(141, 198, 63, 0.7);
-        }
-        .background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url("https://raw.githubusercontent.com/michaelsrpersaud/PositivityApp/main/avocado.jpg");
+        .banner {
+            background-image: url('avocado.jpg');
             background-size: cover;
             background-position: center;
-            z-index: -1;
-        }
-        .logo {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            font-size: 18px;
             color: white;
+            text-align: center;
+            padding: 70px 20px;
+            opacity: 0.6; /* Make the banner semi-transparent */
         }
-        .menu {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            font-size: 24px;
+        .banner h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .banner p {
+            margin: 20px 0;
+        }
+        .button {
+            background-color: #4CAF50;
+            border: none;
             color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f8ff;
+        }
+        .features {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+        .feature {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+        }
+        .feature-icon {
+            width: 100px;
+            height: 100px;
+            background-color: #4CAF50;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            background-size: cover;
+            background-position: center;
+        }
+        /* Apply the background image for the first feature icon */
+        .feature:nth-child(1) .feature-icon {
+            background-image: url('./apps/self-control.png'); /* Set the image for PositivityApp */
+        }
+        .feature:nth-child(2) .feature-icon {
+            background-image: url('avocado.jpg'); /* Set the image for Governance */
+        }
+        .feature:nth-child(3) .feature-icon {
+            background-image: url('UltraRunner_playstore.png'); /* Set the image for Governance */
+        }
+        .centered-text {
+            text-align: center;
         }
 
-        @media (min-width: 768px) {
-            .container {
-                flex-direction: row;
-            }
-            .half {
-                font-size: 36px;
-            }
-            .logo {
-                top: 20px;
-                left: 20px;
-                font-size: 24px;
-            }
+        .split-content {
+            display: flex;
+            margin: 40px 0;
+        }
+        .split-item {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            height: 50px; /* Add a height to ensure vertical centering */
+            text-align: center;
+        }
+        .split-item a:hover {
+            text-decoration: underline;
         }
 
-        @media (min-width: 1024px) {
-            .half {
-                font-size: 48px;
-            }
+        .footer {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer-section {
+            flex: 1;
+            padding: 0 20px;
+            color: #333; /* Change text color to match the white background */
+        }
+        /* Make the hyperlink white */
+        .footer-section a {
+            color: white;
+            text-decoration: none;
+        }
+        /* Add hover effect for the link if desired */
+        .footer-section a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div class="background"></div>
-    <div class="logo"><h2>Shavacadu</h2></div>
-    <div class="menu">☰</div>
-    <div class="container">
-        <a href="https://www.bonfire.com/store/3k-miles/" class="half insights">
-            <div>
-                <h2>Store</h2>
-            </div>
-        </a>
-        <a href="./apps/index.html" class="half printing">
-            <div>
-                <h2>Applications</h2>
-            </div>
-        </a>
+    <div class="banner">
+        <h1>Shavacadu</h1>
+        <p>Providing Innovative Apps</p>
     </div>
-<script>
-document.addEventListener('DOMContentLoaded', (event) => {
-    const container = document.querySelector('.container');
-    const background = document.querySelector('.background');
 
-    function handleMouseMove(e) {
-        const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
-        const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
-        background.style.transform = `translate(${xAxis}px, ${yAxis}px)`;
-    }
+    <div class="content">
+        <div class="centered-text">
+            <span>
+              <h1>Applications</h1>
+              <p>Here are some of the projects we are working on.</p>
+            </span>
+        </div>
 
-    if (window.matchMedia("(min-width: 768px)").matches) {
-        container.addEventListener('mousemove', handleMouseMove);
-    }
+        <div class="features">
+          <a href="./apps/" style="text-decoration: none; color: inherit;">
+            <div class="feature">
+                <div class="feature-icon"></div>
+                <h3>PositivityApp<img src="./images/live.png" width="30" /></h3>
+                <p>Measure your positivity.</p>
+            </div>
+          </a>
+            <div class="feature">
+                <div class="feature-icon"></div>
+                <h3>Governance<img src="./images/coming-soon.png" width="30" /></h3>
+                <p>A tool to provide governance in the enterprise.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon"></div>
+                <h3>UltrRunner<img src="./images/coming-soon.png" width="30" /></h3>
+                <p>Where running meets your lifestyle [coming soon].</p>
+            </div>
+        </div>
 
-    window.addEventListener('resize', () => {
-        if (window.matchMedia("(min-width: 768px)").matches) {
-            container.addEventListener('mousemove', handleMouseMove);
-        } else {
-            container.removeEventListener('mousemove', handleMouseMove);
-            background.style.transform = 'none';
-        }
-    });
-});
-</script>
+        <div class="centered-text">
+            <span>
+              <h3>Shavacadu aims at creating real world apps for the individual and for enterprise.</h3>
+            </span>
+        </div>
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7662493193739998"
-     crossorigin="anonymous"></script>
-<!-- Shavacadu-Wide -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7662493193739998"
-     data-ad-slot="2781971461"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+        <div class="split-content">
+            <div class="split-item" style="background-color: #4CAF50;">
+                <a href="./apps/" style="color: white; text-decoration: none;">
+                    <p>Positivity App!</p>
+                </a>
+            </div>
+            <div class="split-item" style="background-color: #607D8B;">
+                <a href="https://www.bonfire.com/store/3k-miles" style="color: white; text-decoration: none;">
+                    <p>Shop @ our partner!</p>
+                </a>
+            </div>
+        </div>
 
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3><a href="./apps">Apps</a></h3>
+          </div>
+            <div class="footer-section">
+                <h3><a href="./apps/help.html">Contact Us</a></h3>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

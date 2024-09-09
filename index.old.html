@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-adsense-account" content="ca-pub-7662493193739998">
+    <title>Shavacadu</title>
+    <link rel="icon" type="image/x-icon" href="positivity.ico">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .half {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .half:hover {
+            opacity: 0.7;
+        }
+        .insights {
+            background: rgba(0, 174, 239, 0.7);
+        }
+        .printing {
+            background: rgba(141, 198, 63, 0.7);
+        }
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("https://raw.githubusercontent.com/michaelsrpersaud/PositivityApp/main/avocado.jpg");
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 18px;
+            color: white;
+        }
+        .menu {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            color: white;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row;
+            }
+            .half {
+                font-size: 36px;
+            }
+            .logo {
+                top: 20px;
+                left: 20px;
+                font-size: 24px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .half {
+                font-size: 48px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="logo"><h2>Shavacadu</h2></div>
+    <div class="menu">☰</div>
+    <div class="container">
+        <a href="https://www.bonfire.com/store/3k-miles/" class="half insights">
+            <div>
+                <h2>Store</h2>
+            </div>
+        </a>
+        <a href="./apps/index.html" class="half printing">
+            <div>
+                <h2>Applications</h2>
+            </div>
+        </a>
+    </div>
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    const container = document.querySelector('.container');
+    const background = document.querySelector('.background');
+
+    function handleMouseMove(e) {
+        const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+        const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+        background.style.transform = `translate(${xAxis}px, ${yAxis}px)`;
+    }
+
+    if (window.matchMedia("(min-width: 768px)").matches) {
+        container.addEventListener('mousemove', handleMouseMove);
+    }
+
+    window.addEventListener('resize', () => {
+        if (window.matchMedia("(min-width: 768px)").matches) {
+            container.addEventListener('mousemove', handleMouseMove);
+        } else {
+            container.removeEventListener('mousemove', handleMouseMove);
+            background.style.transform = 'none';
+        }
+    });
+});
+</script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7662493193739998"
+     crossorigin="anonymous"></script>
+<!-- Shavacadu-Wide -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7662493193739998"
+     data-ad-slot="2781971461"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</body>
+</html>

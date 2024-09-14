@@ -3,7 +3,7 @@
   <title>Test</title>
   <!-- Placeholder for the rest of the head content -->
   <script>
-      fetch('../apps/head-include.html')
+      fetch('head-include.html')
           .then(response => response.text())
           .then(data => {
               const head = document.getElementsByTagName('head')[0];
@@ -11,15 +11,13 @@
           })
           .catch(error => console.error('Error loading head content:', error));
   </script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7662493193739998"
-   crossorigin="anonymous"></script>
 </head>
 <body>
   <!-- Placeholder for header -->
   <div id="header-placeholder"></div>
 
   <script>
-      fetch('../apps/header.html')
+      fetch('header.html')
           .then(response => response.text())
           .then(data => {
               document.getElementById('header-placeholder').innerHTML = data;
@@ -37,7 +35,7 @@
   </script>
 
   <!-- Include the centralized script -->
-  <script src="../apps/webstorelink.js"></script>
+  <script src="webstorelink.js"></script>
   <!-- End header -->
 
     <!-- Page-specific content -->
@@ -54,7 +52,7 @@
     <div id="footer-placeholder"></div>
 
     <script>
-        fetch('../apps/footer.html')
+        fetch('footer.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('footer-placeholder').innerHTML = data;

@@ -16,6 +16,23 @@
   <!-- Placeholder for header -->
   <div id="header-placeholder"></div>
 
+  <script>
+    fetch('../blog/navigation.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header-placeholder').innerHTML = data;
+
+      // Attach event listener after header is loaded
+      const navButtonBtn = document.getElementById('navButton');
+      if (chromeShopBtn) {
+        chromeShopBtn.addEventListener('click', function() {
+          // Use the central redirection function
+        });
+      }
+    })
+    .catch(error => console.error('Error loading header:', error));
+  </script>
+
 
   <!-- Include the centralized script -->
   <script src="../apps/webstorelink.js"></script>

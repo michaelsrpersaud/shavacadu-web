@@ -11,6 +11,30 @@
   })
   .catch(error => console.error('Error loading head content:', error));
   </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      fetch('header.html')
+          .then(response => response.text())
+          .then(data => {
+              document.body.insertAdjacentHTML('afterbegin', data);
+
+              // Initialize any necessary event listeners or functionality
+              initializeDropdown();
+          })
+          .catch(error => console.error('Error loading header:', error));
+    });
+
+    function initializeDropdown() {
+      // Add any necessary JavaScript for dropdown functionality
+      // For example, if you want to toggle the dropdown on click instead of hover:
+      const dropbtn = document.querySelector('.dropbtn');
+      const dropdownContent = document.querySelector('.dropdown-content');
+
+      dropbtn.addEventListener('click', function() {
+          dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+      });
+    }
+  </script>
 </head>
 <body>
   <!-- Placeholder for header -->
@@ -34,15 +58,14 @@
   </script>
 
   <br />
-  <div id="header-placeholder2"></div>
+  <div id="nav-placeholder"></div>
   <script>
-    fetch('../blog/navigation.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('header-placeholders').innerHTML = data;
-      // Attach event listener after header is loaded
-    })
-    .catch(error => console.error('Error loading header:', error));
+  fetch('../blog/navigation.html')
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById('nav-placeholder').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading navigation:', error));
   </script>
 
 

@@ -13,7 +13,18 @@
   </script>
 </head>
 <body>
+  <!-- Placeholder for header -->
+  <div id="header-placeholder"></div>
 
+  <script>
+    fetch('../blog/navigation.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header-placeholder').innerHTML = data;
+      // Attach event listener after header is loaded
+    })
+    .catch(error => console.error('Error loading header:', error));
+  </script>
 
 
   <!-- Include the centralized script -->

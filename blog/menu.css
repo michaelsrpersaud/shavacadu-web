@@ -1,24 +1,9 @@
 <style>
     /* Reset default styles */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-    }
-
-    /* Navbar styles */
     .navbar {
-        background-color: #333;
-        color: #fff;
-        padding: 1rem;
+        display: inline-block;
     }
 
-    /* Dropdown styles */
     .dropdown {
         position: relative;
         display: inline-block;
@@ -53,15 +38,6 @@
         background-color: #f1f1f1;
     }
 
-    .dropdown:hover .dropdown-content {
-        display: block;
-    }
-
-    .dropdown:hover .dropbtn {
-        background-color: #3e8e41;
-    }
-
-    /* Submenu styles */
     .submenu-item {
         position: relative;
     }
@@ -78,5 +54,12 @@
 
     .submenu-item:hover .submenu {
         display: block;
+    }
+
+    /* Adjust the header layout if necessary */
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 </style>

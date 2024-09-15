@@ -11,28 +11,38 @@
   })
   .catch(error => console.error('Error loading head content:', error));
   </script>
+
 </head>
 <body>
   <!-- Placeholder for header -->
   <div id="header-placeholder"></div>
+  <link rel="stylesheet" href="../blog/menu.css">
 
   <script>
-  fetch('../apps/header.html')
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById('header-placeholder').innerHTML = data;
+    document.addEventListener('DOMContentLoaded', function() {
+      fetch('header.html')
+          .then(response => response.text())
+          .then(data => {
+              document.body.insertAdjacentHTML('afterbegin', data);
 
-    // Attach event listener after header is loaded
-    const chromeShopBtn = document.getElementById('chromeShopBtn');
-    if (chromeShopBtn) {
-      chromeShopBtn.addEventListener('click', function() {
-        // Use the central redirection function
-        redirectToChromeWebStore();
+              // Initialize any necessary event listeners or functionality
+              initializeDropdown();
+          })
+          .catch(error => console.error('Error loading header:', error));
+    });
+
+    function initializeDropdown() {
+      // Add any necessary JavaScript for dropdown functionality
+      // For example, if you want to toggle the dropdown on click instead of hover:
+      const dropbtn = document.querySelector('.dropbtn');
+      const dropdownContent = document.querySelector('.dropdown-content');
+
+      dropbtn.addEventListener('click', function() {
+          dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
       });
     }
-  })
-  .catch(error => console.error('Error loading header:', error));
   </script>
+
 
   <!-- Include the centralized script -->
   <script src="../apps/webstorelink.js"></script>

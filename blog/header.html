@@ -1,0 +1,21 @@
+<header class="header">
+    <div class="container header-content">
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../apps/self-control.png" alt="Positivity Logo" width="50" height="50">
+                <span>Stay Positive!</span>
+            </a>
+        </div>
+        <button class="cta-button" id="chromeShopBtn">
+          <script>
+              fetch('../blog/navigation.html')
+                  .then(response => response.text())
+                  .then(data => {
+                      document.getElementById('header2-placeholder').innerHTML = data;
+                  })
+                  .catch(error => console.error('Error loading header2:', error));
+          </script>
+        </button>
+    </div>
+
+</header>

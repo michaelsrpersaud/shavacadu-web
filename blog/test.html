@@ -11,6 +11,12 @@
   })
   .catch(error => console.error('Error loading head content:', error));
   </script>
+
+</head>
+<body>
+  <!-- Placeholder for header -->
+  <div id="header-placeholder"></div>
+
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       fetch('header.html')
@@ -34,21 +40,6 @@
           dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
       });
     }
-  </script>
-</head>
-<body>
-  <!-- Placeholder for header -->
-  <div id="header-placeholder"></div>
-  <script>
-    fetch('../blog/header.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('header-placeholder').innerHTML = data;
-
-      // Attach event listener after header is loaded
-
-    })
-    .catch(error => console.error('Error loading header:', error));
   </script>
 
 

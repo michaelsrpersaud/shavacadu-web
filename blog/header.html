@@ -7,14 +7,8 @@
             </a>
         </div>
         <div class="cta-button" id="navButton">
-          <script>
-              fetch('../blog/navigation.html')
-                  .then(response => response.text())
-                  .then(data => {
-                      document.getElementById('header-placeholder').innerHTML = data;
-                  })
-                  .catch(error => console.error('Error loading header:', error));
-          </script>
+          <link rel="stylesheet" href="../blog/navigation.html">
+
         </div>
     </div>
 

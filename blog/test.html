@@ -1,15 +1,15 @@
 <html lang="en">
 <head>
-  <title>Test</title>
+  <title>Shaping Perceptions and Emotions</title>
   <!-- Placeholder for the rest of the head content -->
   <script>
-      fetch('head-include.html')
-          .then(response => response.text())
-          .then(data => {
-              const head = document.getElementsByTagName('head')[0];
-              head.insertAdjacentHTML('beforeend', data);
-          })
-          .catch(error => console.error('Error loading head content:', error));
+  fetch('../apps/head-include.html')
+  .then(response => response.text())
+  .then(data => {
+    const head = document.getElementsByTagName('head')[0];
+    head.insertAdjacentHTML('beforeend', data);
+  })
+  .catch(error => console.error('Error loading head content:', error));
   </script>
 </head>
 <body>
@@ -17,47 +17,62 @@
   <div id="header-placeholder"></div>
 
   <script>
-      fetch('header.html')
+  fetch('../apps/header.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('header-placeholder').innerHTML = data;
+
+    // Attach event listener after header is loaded
+    const chromeShopBtn = document.getElementById('chromeShopBtn');
+    if (chromeShopBtn) {
+      chromeShopBtn.addEventListener('click', function() {
+        // Use the central redirection function
+        redirectToChromeWebStore();
+      });
+    }
+  })
+  .catch(error => console.error('Error loading header:', error));
+  </script>
+
+  <script>
+      fetch('../blog/navigation.html')
           .then(response => response.text())
           .then(data => {
               document.getElementById('header-placeholder').innerHTML = data;
-
-              // Attach event listener after header is loaded
-              const chromeShopBtn = document.getElementById('chromeShopBtn');
-              if (chromeShopBtn) {
-                  chromeShopBtn.addEventListener('click', function() {
-                      // Use the central redirection function
-                      redirectToChromeWebStore();
-                  });
-              }
           })
           .catch(error => console.error('Error loading header:', error));
   </script>
 
+
+
   <!-- Include the centralized script -->
-  <script src="webstorelink.js"></script>
+  <script src="../apps/webstorelink.js"></script>
   <!-- End header -->
 
-    <!-- Page-specific content -->
-    <div class="page">
-      <div class="container">
-        <h1>Welcome to the New Page</h1>
-        <p>This is the content of the new page.</p>
-      </div>
-    </div>
-    <br />
-    <br />
+  <!-- Page-specific content -->
+  <div class="page">
+    <div class="container">
+      <h1>Shaping Perceptions and Emotions</h1>
+      <article id="101e26c3-09a5-8002-a604-fc43d4834e07" class="page sans">
+        <header><h1 class="page-title">Shaping Perceptions and Emotions</h1><p class="page-description"></p></header>
 
-    <!-- Placeholder for footer -->
-    <div id="footer-placeholder"></div>
 
-    <script>
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer-placeholder').innerHTML = data;
-            })
-            .catch(error => console.error('Error loading footer:', error));
-    </script>
-</body>
-</html>
+      </article>
+                            </div>
+                          </div>
+                          <br />
+                          <br />
+
+                          <!-- Placeholder for footer -->
+                          <div id="footer-placeholder"></div>
+
+                          <script>
+                          fetch('../apps/footer.html')
+                          .then(response => response.text())
+                          .then(data => {
+                            document.getElementById('footer-placeholder').innerHTML = data;
+                          })
+                          .catch(error => console.error('Error loading footer:', error));
+                        </script>
+                      </body>
+                      </html>

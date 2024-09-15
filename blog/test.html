@@ -16,18 +16,14 @@
   <!-- Placeholder for header -->
   <div id="header-placeholder"></div>
 
-
-
-
   <script>
-      fetch('../blog/navigation.html')
-          .then(response => response.text())
-          .then(data => {
-              document.getElementById('header-placeholder').innerHTML = data;
-          })
-          .catch(error => console.error('Error loading header2:', error));
+    fetch('../blog/header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading header:', error));
   </script>
-
 
 
   <!-- Include the centralized script -->

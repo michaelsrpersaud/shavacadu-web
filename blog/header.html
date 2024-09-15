@@ -6,16 +6,16 @@
                 <span>Stay Positive!</span>
             </a>
         </div>
-        <button class="cta-button" id="chromeShopBtn">
+        <div class="cta-button" id="navButton">
           <script>
               fetch('../blog/navigation.html')
                   .then(response => response.text())
                   .then(data => {
                       document.getElementById('header2-placeholder').innerHTML = data;
                   })
-                  .catch(error => console.error('Error loading header2:', error));
+                  .catch(error => console.error('Error loading header:', error));
           </script>
-        </button>
+        </div>
     </div>
 
 </header>

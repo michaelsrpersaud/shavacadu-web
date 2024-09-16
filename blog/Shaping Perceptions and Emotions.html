@@ -19,28 +19,28 @@
   <link rel="stylesheet" href="../blog/menu.css">
 
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      fetch('header.html')
-          .then(response => response.text())
-          .then(data => {
-              document.body.insertAdjacentHTML('afterbegin', data);
+  document.addEventListener('DOMContentLoaded', function() {
+    fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.body.insertAdjacentHTML('afterbegin', data);
 
-              // Initialize any necessary event listeners or functionality
-              initializeDropdown();
-          })
-          .catch(error => console.error('Error loading header:', error));
+      // Initialize any necessary event listeners or functionality
+      initializeDropdown();
+    })
+    .catch(error => console.error('Error loading header:', error));
+  });
+
+  function initializeDropdown() {
+    // Add any necessary JavaScript for dropdown functionality
+    // For example, if you want to toggle the dropdown on click instead of hover:
+    const dropbtn = document.querySelector('.dropbtn');
+    const dropdownContent = document.querySelector('.dropdown-content');
+
+    dropbtn.addEventListener('click', function() {
+      dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
     });
-
-    function initializeDropdown() {
-      // Add any necessary JavaScript for dropdown functionality
-      // For example, if you want to toggle the dropdown on click instead of hover:
-      const dropbtn = document.querySelector('.dropbtn');
-      const dropdownContent = document.querySelector('.dropdown-content');
-
-      dropbtn.addEventListener('click', function() {
-          dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
-      });
-    }
+  }
   </script>
 
 
@@ -70,93 +70,93 @@
                   <li style="list-style-type:disc">Curated highlight reels of others&#x27; lives</li></ul>
                   <ul id="b851d60b-008c-4dd6-9af2-0a176c209bd2" class="bulleted-list">
                     <li style="list-style-type:disc">Quantifiable metrics of social validation (likes, followers, etc.)</li></ul>
-                  <ul id="9ca068e9-330b-4fb9-b781-28adb5a9275b" class="bulleted-list">
-                    <li style="list-style-type:disc">Exposure to idealized body images and lifestyles</li></ul>
-                    <p id="a0b5ecd6-1052-4cf0-b9bd-2f85dd63551d" class="">Constant comparison can lead to feelings of inadequacy, envy, or lowered self-esteem, especially among young users who are still developing their sense of self.</p>
-                    <h3 id="8018b8a2-6a4b-48a7-b86f-2cfaefbc15d6" class="">Information Filtering and Echo Chambers</h3>
-                    <p id="25957597-fddc-4d6d-bcce-791f0b9d4c75" class="">The algorithms used by social media platforms tend to show users content that aligns with their existing views and interests. This can lead to:</p>
-                    <ul id="23995986-6f13-4df7-8db9-a031261896c2" class="bulleted-list">
-                      <li style="list-style-type:disc">Reinforcement of existing beliefs and biases</li></ul>
-                    <ul id="158df06c-43f6-4c42-981a-36e5a366c926" class="bulleted-list">
-                      <li style="list-style-type:disc">Limited exposure to diverse perspectives</li></ul>
-                    <ul id="0d8b1655-df89-4bad-9499-8d8e2362b4ee" class="bulleted-list">
-                      <li style="list-style-type:disc">Polarization of opinions on social and political issues</li></ul>
-                      <p id="adeaa813-6da4-4436-9d44-fc4b09e80081" class="">As a result, users may develop skewed perceptions of reality based on the filtered information they receive.</p>
-                      <h3 id="c3f155b2-5373-4dfe-a262-c3b15503dec7" class="">Immediate Emotional Feedback</h3>
-                      <p id="ed88ab2e-7069-4529-b44c-7a3193876915" class="">Social media platforms provide instant emotional feedback through likes, comments, and shares. This immediate gratification can:</p>
-                      <ul id="de1721dc-ad3b-4a64-9188-60c4cb33481f" class="bulleted-list">
-                        <li style="list-style-type:disc">Create a dopamine-driven feedback loop, encouraging continued engagement</li></ul>
-                      <ul id="43802147-a6af-4e65-8901-b43bae2557b2" class="bulleted-list">
-                        <li style="list-style-type:disc">Lead to emotional dependence on online validation</li></ul>
-                      <ul id="a28f77bf-cda0-4a1d-a27f-8581719f1747" class="bulleted-list">
-                        <li style="list-style-type:disc">Cause anxiety or disappointment when posts don&#x27;t receive expected reactions</li></ul>
-                        <h3 id="54016867-2dcc-4b56-9b71-7d4e9b386afa" class="">Narrative Framing</h3>
-                        <p id="f0be9c07-2bcb-42e0-9eb9-47c5cae8b085" class="">The way information is presented on social media can significantly influence how users perceive events and issues. This includes:</p>
-                        <ul id="07b73100-e3ce-48be-b120-2de0d47ca2f0" class="bulleted-list"><li style="list-style-type:disc">Selective highlighting of certain aspects of a story</li></ul>
-                        <ul id="d25b245f-8b9c-452b-9c7f-4a694c876385" class="bulleted-list">
-                          <li style="list-style-type:disc">Use of emotionally charged language or imagery</li></ul>
-                          <ul id="37c35d02-cc4e-4e1c-91f3-b4299f1ce638" class="bulleted-list">
-                            <li style="list-style-type:disc">Rapid spread of misinformation or incomplete narratives</li></ul>
-                            <p id="6dc8de39-e366-4582-9203-e5021ccf9618" class="">These factors can shape users&#x27; perceptions of current events, social issues, and even their own lives.</p>
-                            <h3 id="2a0607e6-f322-4e84-aa00-0fb583092ce6" class="">Emotional Intensity and Virality</h3>
-                            <p id="16ca5f5f-9b8c-4855-aecf-3327831e9f67" class="">Content that evokes strong emotions, whether positive or negative, tends to spread more quickly on social media. This can lead to:</p>
-                            <ul id="cc7edcec-ab87-4aba-a5c7-36319e0c6bf3" class="bulleted-list">
-                              <li style="list-style-type:disc">Amplification of extreme viewpoints</li></ul>
-                              <ul id="b2cad857-ab3d-454f-b8da-01cd91389110" class="bulleted-list">
-                                <li style="list-style-type:disc">Rapid mood shifts in online communities</li></ul>
-                                <ul id="e555ace5-032a-419f-87cb-8f8039a736f8" class="bulleted-list">
-                                  <li style="list-style-type:disc">Heightened emotional responses to events or issues</li></ul>
-                                  <p id="9917c99a-aeb2-44ff-8dad-bf4b68d1f6be" class="">By understanding these mechanisms, users can become more aware of how their perceptions and emotions are being influenced by the content they consume online. This awareness is crucial for developing a healthier relationship with social media and maintaining emotional well-being in the digital age.</p>
-                                  <p id="101e26c3-09a5-80cf-9a46-d27f42181771" class="">
-                                  </p>
-                                  <p id="1bebf473-4fff-47a4-a31d-54db82c80cf5" class="">Citations:
-                                    <br/>[1] <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9301025/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9301025/</a>
-                                    <br/>[2] <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8933808/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8933808/</a>
-                                    <br/>[3] <a href="https://www.sciencedirect.com/science/article/abs/pii/S073658532300148X">https://www.sciencedirect.com/science/article/abs/pii/S073658532300148X</a>
-                                    <br/>[4] <a href="https://www.tandfonline.com/doi/full/10.1080/15213269.2019.1608257">https://www.tandfonline.com/doi/full/10.1080/15213269.2019.1608257</a>
-                                    <br/>[5] <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9007765/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9007765<a>
-                                    <br/>[6] <a href="https://www.vantagefit.io/blog/quotes-about-social-media-and-mental-health/">https://www.vantagefit.io/blog/quotes-about-social-media-and-mental-health/</a>
-                                    <br/>[7] <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9915628/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9915628/</a>
-                                    <br/>[8] <a href="https://rr.peercommunityin.org/articles/rec?id=666">https://rr.peercommunityin.org/articles/rec?id=666</a>
-                                    <br/>[9] <a href="https://integrishealth.org/resources/on-your-health/2024/january/digital-nutrition">https://integrishealth.org/resources/on-your-health/2024/january/digital-nutrition</a></p>
-                                    <p id="101e26c3-09a5-80ce-a065-f6120f235d30" class="">PerplexityAi</p>
-                                    <p id="101e26c3-09a5-80ce-a065-f6120f235d30" class="">2024-09-12</p>
-                                </div>
-                              </article>
-                            </div>
-                          </div>
-                          <br />
-                          <br />
+                    <ul id="9ca068e9-330b-4fb9-b781-28adb5a9275b" class="bulleted-list">
+                      <li style="list-style-type:disc">Exposure to idealized body images and lifestyles</li></ul>
+                      <p id="a0b5ecd6-1052-4cf0-b9bd-2f85dd63551d" class="">Constant comparison can lead to feelings of inadequacy, envy, or lowered self-esteem, especially among young users who are still developing their sense of self.</p>
+                      <h3 id="8018b8a2-6a4b-48a7-b86f-2cfaefbc15d6" class="">Information Filtering and Echo Chambers</h3>
+                      <p id="25957597-fddc-4d6d-bcce-791f0b9d4c75" class="">The algorithms used by social media platforms tend to show users content that aligns with their existing views and interests. This can lead to:</p>
+                      <ul id="23995986-6f13-4df7-8db9-a031261896c2" class="bulleted-list">
+                        <li style="list-style-type:disc">Reinforcement of existing beliefs and biases</li></ul>
+                        <ul id="158df06c-43f6-4c42-981a-36e5a366c926" class="bulleted-list">
+                          <li style="list-style-type:disc">Limited exposure to diverse perspectives</li></ul>
+                          <ul id="0d8b1655-df89-4bad-9499-8d8e2362b4ee" class="bulleted-list">
+                            <li style="list-style-type:disc">Polarization of opinions on social and political issues</li></ul>
+                            <p id="adeaa813-6da4-4436-9d44-fc4b09e80081" class="">As a result, users may develop skewed perceptions of reality based on the filtered information they receive.</p>
+                            <h3 id="c3f155b2-5373-4dfe-a262-c3b15503dec7" class="">Immediate Emotional Feedback</h3>
+                            <p id="ed88ab2e-7069-4529-b44c-7a3193876915" class="">Social media platforms provide instant emotional feedback through likes, comments, and shares. This immediate gratification can:</p>
+                            <ul id="de1721dc-ad3b-4a64-9188-60c4cb33481f" class="bulleted-list">
+                              <li style="list-style-type:disc">Create a dopamine-driven feedback loop, encouraging continued engagement</li></ul>
+                              <ul id="43802147-a6af-4e65-8901-b43bae2557b2" class="bulleted-list">
+                                <li style="list-style-type:disc">Lead to emotional dependence on online validation</li></ul>
+                                <ul id="a28f77bf-cda0-4a1d-a27f-8581719f1747" class="bulleted-list">
+                                  <li style="list-style-type:disc">Cause anxiety or disappointment when posts don&#x27;t receive expected reactions</li></ul>
+                                  <h3 id="54016867-2dcc-4b56-9b71-7d4e9b386afa" class="">Narrative Framing</h3>
+                                  <p id="f0be9c07-2bcb-42e0-9eb9-47c5cae8b085" class="">The way information is presented on social media can significantly influence how users perceive events and issues. This includes:</p>
+                                  <ul id="07b73100-e3ce-48be-b120-2de0d47ca2f0" class="bulleted-list"><li style="list-style-type:disc">Selective highlighting of certain aspects of a story</li></ul>
+                                  <ul id="d25b245f-8b9c-452b-9c7f-4a694c876385" class="bulleted-list">
+                                    <li style="list-style-type:disc">Use of emotionally charged language or imagery</li></ul>
+                                    <ul id="37c35d02-cc4e-4e1c-91f3-b4299f1ce638" class="bulleted-list">
+                                      <li style="list-style-type:disc">Rapid spread of misinformation or incomplete narratives</li></ul>
+                                      <p id="6dc8de39-e366-4582-9203-e5021ccf9618" class="">These factors can shape users&#x27; perceptions of current events, social issues, and even their own lives.</p>
+                                      <h3 id="2a0607e6-f322-4e84-aa00-0fb583092ce6" class="">Emotional Intensity and Virality</h3>
+                                      <p id="16ca5f5f-9b8c-4855-aecf-3327831e9f67" class="">Content that evokes strong emotions, whether positive or negative, tends to spread more quickly on social media. This can lead to:</p>
+                                      <ul id="cc7edcec-ab87-4aba-a5c7-36319e0c6bf3" class="bulleted-list">
+                                        <li style="list-style-type:disc">Amplification of extreme viewpoints</li></ul>
+                                        <ul id="b2cad857-ab3d-454f-b8da-01cd91389110" class="bulleted-list">
+                                          <li style="list-style-type:disc">Rapid mood shifts in online communities</li></ul>
+                                          <ul id="e555ace5-032a-419f-87cb-8f8039a736f8" class="bulleted-list">
+                                            <li style="list-style-type:disc">Heightened emotional responses to events or issues</li></ul>
+                                            <p id="9917c99a-aeb2-44ff-8dad-bf4b68d1f6be" class="">By understanding these mechanisms, users can become more aware of how their perceptions and emotions are being influenced by the content they consume online. This awareness is crucial for developing a healthier relationship with social media and maintaining emotional well-being in the digital age.</p>
+                                            <p id="101e26c3-09a5-80cf-9a46-d27f42181771" class="">
+                                            </p>
+                                            <p id="1bebf473-4fff-47a4-a31d-54db82c80cf5" class="">Citations:
+                                              <br/>[1] <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9301025/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9301025/</a>
+                                              <br/>[2] <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8933808/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8933808/</a>
+                                              <br/>[3] <a href="https://www.sciencedirect.com/science/article/abs/pii/S073658532300148X">https://www.sciencedirect.com/science/article/abs/pii/S073658532300148X</a>
+                                              <br/>[4] <a href="https://www.tandfonline.com/doi/full/10.1080/15213269.2019.1608257">https://www.tandfonline.com/doi/full/10.1080/15213269.2019.1608257</a>
+                                              <br/>[5] <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9007765/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9007765<a>
+                                                <br/>[6] <a href="https://www.vantagefit.io/blog/quotes-about-social-media-and-mental-health/">https://www.vantagefit.io/blog/quotes-about-social-media-and-mental-health/</a>
+                                                <br/>[7] <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9915628/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9915628/</a>
+                                                <br/>[8] <a href="https://rr.peercommunityin.org/articles/rec?id=666">https://rr.peercommunityin.org/articles/rec?id=666</a>
+                                                <br/>[9] <a href="https://integrishealth.org/resources/on-your-health/2024/january/digital-nutrition">https://integrishealth.org/resources/on-your-health/2024/january/digital-nutrition</a></p>
+                                                <p id="101e26c3-09a5-80ce-a065-f6120f235d30" class="">PerplexityAi</p>
+                                                <p id="101e26c3-09a5-80ce-a065-f6120f235d30" class="">2024-09-12</p>
+                                              </div>
+                                            </article>
+                                          </div>
+                                        </div>
+                                        <br />
+                                        <br />
 
-                          <section class="ads">
-                              <div class="container">
-                                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7662493193739998"
-                                     crossorigin="anonymous">
-                                </script>
-                                <!-- Shavacadu-Wide -->
-                                <ins class="adsbygoogle"
-                                     style="display:block"
-                                     data-ad-client="ca-pub-7662493193739998"
-                                     data-ad-slot="2781971461"
-                                     data-ad-format="auto"
-                                     data-full-width-responsive="true"></ins>
-                                <script>
-                                     (adsbygoogle = window.adsbygoogle || []).push({});
-                                </script>
-                              </div>
-                          </section>
+                                        <section class="ads">
+                                          <div class="container">
+                                            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7662493193739998"
+                                            crossorigin="anonymous">
+                                            </script>
+                                            <!-- Shavacadu-Wide -->
+                                            <ins class="adsbygoogle"
+                                            style="display:block"
+                                            data-ad-client="ca-pub-7662493193739998"
+                                            data-ad-slot="2781971461"
+                                            data-ad-format="auto"
+                                            data-full-width-responsive="true"></ins>
+                                            <script>
+                                            (adsbygoogle = window.adsbygoogle || []).push({});
+                                            </script>
+                                          </div>
+                                        </section>
 
 
-                          <!-- Placeholder for footer -->
-                          <div id="footer-placeholder"></div>
+                                        <!-- Placeholder for footer -->
+                                        <div id="footer-placeholder"></div>
 
-                          <script>
-                          fetch('../apps/footer.html')
-                          .then(response => response.text())
-                          .then(data => {
-                            document.getElementById('footer-placeholder').innerHTML = data;
-                          })
-                          .catch(error => console.error('Error loading footer:', error));
-                        </script>
-                      </body>
-                      </html>
+                                        <script>
+                                        fetch('../apps/footer.html')
+                                        .then(response => response.text())
+                                        .then(data => {
+                                          document.getElementById('footer-placeholder').innerHTML = data;
+                                        })
+                                        .catch(error => console.error('Error loading footer:', error));
+                                        </script>
+                                      </body>
+                                      </html>

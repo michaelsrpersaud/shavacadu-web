@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shavacadu - About Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f0f8ff;
+        }
+        .banner {
+            background-image: url('avocado.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+            opacity: 0.6;
+        }
+        .banner h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .banner p {
+            margin: 20px 0;
+        }
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f8ff;
+        }
+        .features {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+            flex-wrap: wrap; /* Ensure wrapping on smaller screens */
+        }
+        .feature {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+            margin: 10px;
+            min-width: 250px; /* Ensure boxes don't shrink too much on small screens */
+        }
+        .feature-icon {
+            width: 100px;
+            height: 100px;
+            background-color: #4CAF50;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            background-size: cover;
+            background-position: center;
+        }
+        /* Apply the background image for the first feature icon */
+        .feature:nth-child(1) .feature-icon {
+            background-image: url('./images/michaelsrpersaud_aboutme.jpeg');
+        }
+        .feature:nth-child(2) .feature-icon {
+            background-image: url('./images/governance.png');
+        }
+        .feature:nth-child(3) .feature-icon {
+            background-image: url('UltraRunner_playstore.png');
+        }
+        .centered-text {
+            text-align: center;
+            background-color: lightgreen;
+        }
+        .split-content {
+            display: flex;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        .split-item {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Align text vertically */
+            height: 50px;
+            text-align: center;
+        }
+        .split-item a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer-section {
+            flex: 1;
+            padding: 0 20px;
+            color: #fff; /* Change text color to white */
+        }
+        .footer-section a {
+            color: white;
+            text-decoration: none;
+        }
+        .footer-section a:hover {
+            text-decoration: underline;
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .banner h1 {
+                font-size: 2em;
+            }
+            .features {
+                flex-direction: column; /* Stack features vertically */
+            }
+            .split-content {
+                flex-direction: column; /* Stack the split content */
+            }
+            .split-item {
+                height: auto; /* Allow flexible height for content */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .banner h1 {
+                font-size: 1.8em;
+            }
+            .button {
+                font-size: 14px;
+                padding: 10px 24px;
+            }
+        }
+
+        /*Blog section*/
+        .centered-blog-text h3 {
+            background-color: lightgray;
+        }
+        .centered-blog-ptext {
+            background-color: white;
+        }
+
+
+    </style>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7662493193739998"
+     crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="banner">
+        <h1><b>Shavacadu</b></h1>
+        <p>Providing Innovative Apps</p>
+    </div>
+
+    <div class="content">
+        <div class="centered-text">
+            <span>
+              <h1>About Us</h1>
+              <p>We are a Kitchner, Ontario based startup working on a number of projects for the individual and enterprise.</p>
+            </span>
+        </div>
+
+        <div class="features">
+          <a href="./apps/" style="text-decoration: none; color: inherit;">
+            <div class="feature">
+                <div class="feature-icon"></div>
+                <p>Application tinker-er, Security minded</p>
+            </div>
+          </a>
+            <div class="feature">
+                <h3>Michael Persaud</h3>
+                <h2>Founder</h2>
+                <p>Michael has been a founder for two startups in the KW area. He continuously improves the community through security and application development that overlaps both personal and enterprise.</p>
+                <p>Follow us: <a href="https://www.linkedin.com/company/shavacadu//">Linked In</a></p>
+            </div>
+        </div>
+
+        <div class="centered-text">
+            <span>
+              <h3>Shavacadu aims at creating real world apps for the individual and for enterprise.</h3>
+            </span>
+        </div>
+
+        <div class="split-content">
+            <div class="split-item" style="background-color: #4CAF50;">
+                <a href="./apps/" style="color: white; text-decoration: none;">
+                    <p>Positivity App!</p>
+                </a>
+            </div>
+            <div class="split-item" style="background-color: #607D8B;">
+                <a href="https://www.bonfire.com/store/3k-miles" style="color: white; text-decoration: none;">
+                    <p>Shop @ our partner!</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3><a href="./apps">Apps</a></h3>
+          </div>
+          <div class="footer-section">
+            <h3><a href="../aboutus.html">About Us</a></h3>
+          </div>
+            <div class="footer-section">
+                <h3><a href="./apps/help.html">Contact Us</a></h3>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

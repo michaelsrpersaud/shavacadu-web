@@ -1,0 +1,16 @@
+#Ads.txt shavacadu.com
+#Ads.txt managed by AdsTxtManager.com - the free ads.txt management tool for publishers
+ownerdomain=shavacadu.com
+contact=directsales@ezoic.com
+managerdomain=ezoic.ai
+
+ezoic.ai, f3e502a2d661da267ab9a3bd571cf966, DIRECT
+# 35
+themediagrid.com, 4M5PGT, DIRECT, 35d5010d7789b49d
+themediagrid.com, Q19AKF, DIRECT, 35d5010d7789b49d
+adingo.jp, 24483, RESELLER
+sonobi.com, 192ecdea01, RESELLER, d1a215d9eb5aee9e
+inmobi.com, 264debfabe2f4a07beb83aa2d92136ef, DIRECT, 83e75a7ae333ca9d
+video.unrulymedia.com, 1346664749, RESELLER
+google.com, pub-6644558441501035, DIRECT, f08c47fec0942fa0
+google.com, pub-1175987143200523, RESELLER, f08c47fec0942fa0

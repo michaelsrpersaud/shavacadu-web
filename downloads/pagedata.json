@@ -4,7 +4,8 @@
       {
         "Timestamp": "2024-01-02T23:01:44",
         "Positive": 0,
-        "Negative": 0
+        "Negative": 0,
+        "Domain": ""
       } 
     ]
   }

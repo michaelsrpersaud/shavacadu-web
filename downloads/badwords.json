@@ -1,0 +1,62 @@
+[
+    {
+        "badtext": "shit",
+        "substituted": "poop"
+    },
+    {
+        "badtext": "bitch",
+        "substituted": "person"
+    },
+    {
+        "badtext": "bugger",
+        "substituted": "****"
+    },
+    {
+        "badtext": "fuck",
+        "substituted": "****"
+    },
+    {
+        "badtext": "motherfucker",
+        "substituted": "person"
+    },
+    {
+        "badtext": "cunt",
+        "substituted": "****"
+    },
+    {
+        "badtext": "asshole",
+        "substituted": "****"
+    },
+    {
+        "badtext": "arse",
+        "substituted": "****"
+    },
+    {
+        "badtext": "arsehole",
+        "substituted": "****"
+    },
+    {
+        "badtext": "pussy",
+        "substituted": "****"
+    },
+    {
+        "badtext": "wanker",
+        "substituted": "****"
+    },
+    {
+        "badtext": "faggot",
+        "substituted": "****"
+    },
+    {
+        "badtext": "whore",
+        "substituted": "****"
+    },
+    {
+        "badtext": "nigga",
+        "substituted": "****"
+    },
+    {
+        "badtext": "dumbass",
+        "substituted": "****"
+    }
+]

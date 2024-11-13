@@ -1,0 +1,123 @@
+  <html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P24P6E1GQE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-P24P6E1GQE');
+    </script>
+    <title>Blog</title>
+    <!-- Placeholder for the rest of the head content -->
+    <script>
+        fetch('head-include.html')
+            .then(response => response.text())
+            .then(data => {
+                const head = document.getElementsByTagName('head')[0];
+                head.insertAdjacentHTML('beforeend', data);
+            })
+            .catch(error => console.error('Error loading head content:', error));
+    </script>
+    <!-- Placeholder for Ezoic -->
+    <script src="https://the.gatekeeperconsent.com/cmp.min.js" data-cfasync="false"></script>
+    <script async src="//www.ezojs.com/ezoic/sa.min.js"></script>
+    <script>
+      window.ezstandalone = window.ezstandalone || {};
+      ezstandalone.cmd = ezstandalone.cmd || [];
+    </script>
+    <!-- Placeholder for Ezoic
+        Block
+    -->
+    <!-- Placeholder for Ezoic
+    <script src="https://the.gatekeeperconsent.com/cmp.min.js" data-cfasync="false"></script>
+    <script async src="//www.ezojs.com/ezoic/sa.min.js"></script>
+    <script>
+      window.ezstandalone = window.ezstandalone || {};
+      ezstandalone.cmd = ezstandalone.cmd || [];
+    </script>
+     -->
+  </head>
+  <body>
+    <!-- Placeholder for header -->
+    <div id="header-placeholder"></div>
+
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+
+                // Attach event listener after header is loaded
+                const chromeShopBtn = document.getElementById('chromeShopBtn');
+                if (chromeShopBtn) {
+                    chromeShopBtn.addEventListener('click', function() {
+                        // Use the central redirection function
+                        redirectToChromeWebStore();
+                    });
+                }
+            })
+            .catch(error => console.error('Error loading header:', error));
+    </script>
+
+    <!-- Include the centralized script -->
+    <script src="webstorelink.js"></script>
+    <!-- End header -->
+    <script async
+      src="https://js.stripe.com/v3/buy-button.js">
+    </script>
+
+      <!-- Page-specific content -->
+      <div class="page">
+        <div class="container">
+          <h1>Blog!</h1>
+          <br />
+          <br />
+        </div>
+        <div class="container">
+          <h2>Effects of Negative Content on Mental Health!</h2>
+          <img src="../images/positive-tiles.png" alt="positive tiles" height="120"/>
+          <p>Based on reports from Nature and other scientific sources, research indicates that 
+            exposure to negative news content can significantly impact mental health and positivity, 
+            with studies showing increased rates of anxiety, stress, and depression among frequent 
+            consumers of negative media.</p>
+          <br />
+          <p><a href="https://www.perplexity.ai/page/effects-of-negative-content-on-KzohEhXySaWejlkFr9kCRA">Read more<br />
+            [https://www.perplexity.ai/page/effects-of-negative-content-on-KzohEhXySaWejlkFr9kCRA]</a></p>
+          <br />
+          
+          <br />
+          <br />
+          <br />
+          <br />
+        </div>
+    </div>
+
+    <section class="ads">
+        <div class="container">
+          <!-- Placeholder for Ezoic 
+          <div id="ezoic-pub-ad-placeholder-103"></div>
+          <script>
+              ezstandalone.cmd.push(function() {
+                  ezstandalone.showAds(103)
+              });
+          </script>
+           -->
+        </div>
+    </section>
+
+
+      <!-- Placeholder for footer -->
+      <div id="footer-placeholder"></div>
+
+      <script>
+          fetch('footer.html')
+              .then(response => response.text())
+              .then(data => {
+                  document.getElementById('footer-placeholder').innerHTML = data;
+              })
+              .catch(error => console.error('Error loading footer:', error));
+      </script>
+  </body>
+  </html>

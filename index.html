@@ -59,7 +59,7 @@
             display: flex;
             justify-content: space-between;
             margin: 40px 0;
-            flex-wrap: wrap; /* Ensure wrapping on smaller screens */
+            /* flex-wrap: wrap; /* Ensure wrapping on smaller screens */
         }
         .feature {
             flex: 1;
@@ -82,9 +82,12 @@
             background-image: url('./apps/self-control.png');
         }
         .feature:nth-child(2) .feature-icon {
-            background-image: url('./images/governance.png');
+            background-image: url('./images/memory.png');
         }
         .feature:nth-child(3) .feature-icon {
+            background-image: url('./images/governance.png');
+        }
+        .feature:nth-child(4) .feature-icon {
             background-image: url('UltraRunner_playstore.png');
         }
         .centered-text {
@@ -139,6 +142,7 @@
             }
             .features {
                 flex-direction: column; /* Stack features vertically */
+                flex-wrap: wrap; /* Ensure wrapping on smaller screens */
             }
             .split-content {
                 flex-direction: column; /* Stack the split content */
@@ -200,7 +204,12 @@
                 <p>Measure your positivity.</p>
             </div>
           </a>
-            <div class="feature">
+          <div class="feature">
+            <div class="feature-icon"></div>
+            <h3>Inclinatio<img src="./images/coming-soon.png" width="30" /></h3>
+            <p>A web plugin that analyzes news articles for truthfulness and bias</p>
+        </div>
+          <div class="feature">
                 <div class="feature-icon"></div>
                 <h3>Governance<img src="./images/coming-soon.png" width="30" /></h3>
                 <p>A tool to provide governance in the enterprise.</p>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — JIT License Pool for Salesforce</title>
+  <meta name="description" content="A 5-part series on Salesforce license waste: the scale of the problem, why it keeps happening, the real cost, and what a systemic solution looks like." />
+  <meta name="theme-color" content="#0057FF" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,4 91,27 91,73 50,96 9,73 9,27' fill='%230057FF'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="blog.css" />
+  <!-- Google Tag — ID configured in analytics.js (one place to update) -->
+  <script src="../analytics.js"></script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">
+        <span class="logo-icon">⬡</span>
+        <span class="logo-text">
+          <span class="logo-name">JIT License Pool</span>
+          <span class="logo-suffix">for Salesforce</span>
+        </span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../index.html#how-it-works">How It Works</a></li>
+        <li><a href="../index.html#chat">Chat Commands</a></li>
+        <li><a href="../index.html#calculator">Calculator</a></li>
+        <li><a href="../index.html#pricing">Pricing</a></li>
+        <li><a href="../index.html#faq">FAQ</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+        <li><a href="index.html" style="color:var(--white);font-weight:700;">Blog</a></li>
+      </ul>
+      <a href="../index.html#calculator" class="btn btn-nav">Calculate Savings</a>
+      <button class="nav-burger" id="navBurger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="../index.html">← Home</a>
+      <a href="../index.html#how-it-works">How It Works</a>
+      <a href="../index.html#chat">Chat Commands</a>
+      <a href="../index.html#calculator">Calculator</a>
+      <a href="../index.html#pricing">Pricing</a>
+      <a href="../index.html#faq">FAQ</a>
+      <a href="../index.html#contact">Contact</a>
+      <a href="index.html">Blog</a>
+      <a href="../index.html#calculator" class="btn btn-primary">Calculate Savings</a>
+    </div>
+  </nav>
+
+  <div class="blog-breadcrumb">
+    <div class="container">
+      <a href="../index.html">Home</a><span class="sep">›</span>
+      <span>Blog</span>
+    </div>
+  </div>
+
+  <!-- BLOG HERO -->
+  <section class="blog-hero">
+    <div class="container">
+      <div class="blog-hero-tag">5-Part Series</div>
+      <h1>The Salesforce<br /><span class="gradient-text">License Waste Problem</span></h1>
+      <p>From understanding the scale of the problem to calculating your exact exposure — a deep dive into the $80 billion inefficiency hiding in enterprise software budgets.</p>
+    </div>
+  </section>
+
+  <!-- ARTICLE GRID -->
+  <section class="blog-section">
+    <div class="container">
+      <p class="series-label">All Articles — The Salesforce License Waste Series</p>
+      <div class="blog-grid">
+
+        <!-- Article 1 -->
+        <a class="blog-card" data-release="2026-06-18" href="article-01.html">
+          <span class="card-series-badge">Part 1 of 5</span>
+          <h2>Your Company Is Probably Paying for Salesforce Users Who Haven't Logged In Since Last Year</h2>
+          <p>Fewer than half of purchased Salesforce licenses are actively used. At $175/seat/month, the silent cost for a mid-size org can exceed $250,000 a year — without a single alert firing.</p>
+          <div class="card-meta">
+            <span>📅 June 18, 2026</span>
+            <span>⏱ 6 min read</span>
+          </div>
+          <span class="card-read-link">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </a>
+
+        <!-- Article 2 -->
+        <a class="blog-card" data-release="2026-06-20" href="article-02.html">
+          <span class="card-series-badge">Part 2 of 5</span>
+          <h2>Salesforce License Sprawl Is Not a Budget Problem. It's a Visibility Problem.</h2>
+          <p>The admin is not the gap. Five structural failure points — offboarding, role changes, contractor access, tool migrations, and PSL accumulation — explain why ghost licenses keep building up regardless of how diligent the team is.</p>
+          <div class="card-meta">
+            <span>📅 June 20, 2026</span>
+            <span>⏱ 7 min read</span>
+          </div>
+          <span class="card-read-link">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </a>
+
+        <!-- Article 3 -->
+        <a class="blog-card" data-release="2026-06-23" href="article-03.html">
+          <span class="card-series-badge">Part 3 of 5</span>
+          <h2>We Ran the Math on Salesforce License Waste. The Number Will Make Your Finance Team Uncomfortable.</h2>
+          <p>Three inputs. A formula anyone can run. At a 35% idle rate and Enterprise pricing, a 500-seat org is wasting over $256,000 a year — before Permission Set Licenses are counted.</p>
+          <div class="card-meta">
+            <span>📅 June 23, 2026</span>
+            <span>⏱ 5 min read</span>
+          </div>
+          <span class="card-read-link">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </a>
+
+        <!-- Article 4 -->
+        <a class="blog-card" data-release="2026-06-25" href="article-04.html">
+          <span class="card-series-badge">Part 4 of 5</span>
+          <h2>One Salesforce Audit. 90 Inactive Licenses Found. Here's What Happened Next.</h2>
+          <p>A 580-seat org. 93 inactive accounts discovered. $127,920 saved at renewal. And then, twelve weeks later, 14 new ghost licenses had already accumulated. The audit worked. The audit also expired immediately.</p>
+          <div class="card-meta">
+            <span>📅 June 25, 2026</span>
+            <span>⏱ 4 min read</span>
+          </div>
+          <span class="card-read-link">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </a>
+
+        <!-- Article 5 -->
+        <a class="blog-card" data-release="2026-06-27" href="article-05.html">
+          <span class="card-series-badge">Part 5 of 5</span>
+          <h2>What If Your Salesforce Licenses Managed Themselves?</h2>
+          <p>A license provisioned the moment someone needs it. Reclaimed the moment they don't. Every departure handled automatically. Every change logged. The audit always current — not because someone ran it, but because the system maintains it.</p>
+          <div class="card-meta">
+            <span>📅 June 27, 2026</span>
+            <span>⏱ 4 min read</span>
+          </div>
+          <span class="card-read-link">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- OFF THE TRAILHEAD SECTION -->
+  <section class="blog-section" style="background: var(--off-white); border-top: 1px solid var(--border);">
+    <div class="container">
+      <p class="series-label">Off the Trailhead — Salesforce Hot Takes</p>
+      <div class="blog-grid">
+
+        <a class="blog-card" href="ot-01-pricing.html">
+          <span class="card-series-badge">Off the Trailhead</span>
+          <h2>Salesforce Just Raised Prices Again. Here's What They Don't Say in the Press Release.</h2>
+          <p>72% of Salesforce's ARR growth in FY2026 came from price increases on existing customers. Here's what the revenue math actually means for your next renewal conversation.</p>
+          <div class="card-meta">
+            <span>📅 June 15, 2026</span>
+            <span>⏱ 6 min read</span>
+          </div>
+          <span class="card-read-link">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </a>
+
+        <a class="blog-card" href="ot-02-data-readiness.html">
+          <span class="card-series-badge">Off the Trailhead</span>
+          <h2>Agentforce Is Real. Your Data Is Not Ready for It.</h2>
+          <p>Salesforce spent $8 billion on Informatica. Benioff said "without clean data there is no intelligence — only hallucination." Most orgs deploying Agentforce are not taking that seriously enough.</p>
+          <div class="card-meta">
+            <span>📅 June 18, 2026</span>
+            <span>⏱ 6 min read</span>
+          </div>
+          <span class="card-read-link">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </a>
+
+        <a class="blog-card" href="ot-03-job-market.html">
+          <span class="card-series-badge">Off the Trailhead</span>
+          <h2>The Salesforce Admin Job Market Is Not What Anyone Is Telling You</h2>
+          <p>330% entry-level oversupply. Job postings that doubled in 16 months. Both things are true at the same time — and understanding why tells you everything about where this market is actually going.</p>
+          <div class="card-meta">
+            <span>📅 June 21, 2026</span>
+            <span>⏱ 6 min read</span>
+          </div>
+          <span class="card-read-link">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </a>
+
+        <a class="blog-card" href="ot-04-midmarket.html">
+          <span class="card-series-badge">Off the Trailhead</span>
+          <h2>Why Mid-Market Companies Buy Salesforce and Then Hate It (And Why They Still Don't Leave)</h2>
+          <p>$80K–$150K in admin costs. Sales teams that won't adopt it. And yet Salesforce still gains customers at a 1.45:1 ratio. Here's the pattern nobody explains before you sign.</p>
+          <div class="card-meta">
+            <span>📅 June 24, 2026</span>
+            <span>⏱ 7 min read</span>
+          </div>
+          <span class="card-read-link">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </a>
+
+        <a class="blog-card" href="ot-05-hype-gap.html">
+          <span class="card-series-badge">Off the Trailhead</span>
+          <h2>The Agentforce Hype Gap: What Salesforce Claims vs. What Enterprises Are Actually Experiencing</h2>
+          <p>Salesforce claims 85% autonomous resolution. Real-world enterprise deployments are landing at 30–50%. The gap isn't evidence of failure — it's evidence of a difference nobody warned you about.</p>
+          <div class="card-meta">
+            <span>📅 June 26, 2026</span>
+            <span>⏱ 6 min read</span>
+          </div>
+          <span class="card-read-link">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </a>
+
+        <a class="blog-card" href="ot-06-tco.html">
+          <span class="card-series-badge">Off the Trailhead</span>
+          <h2>The Real Cost of the Salesforce Ecosystem (Your Invoice Is Only 40–60% of It)</h2>
+          <p>Slack demanded a 40x price increase from one customer. The Agentforce pricing backlash was public. Your invoice is a floor — the real number is built in layers on top of it.</p>
+          <div class="card-meta">
+            <span>📅 June 28, 2026</span>
+            <span>⏱ 7 min read</span>
+          </div>
+          <span class="card-read-link">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </a>
+
+        <a class="blog-card" href="ot-07-certifications.html">
+          <span class="card-series-badge">Off the Trailhead</span>
+          <h2>Salesforce Certifications in 2026: The Honest Answer Nobody Gives You</h2>
+          <p>375,000 certified Salesforce professionals. 31,000 open roles. 3.4 candidates per position. The certification is necessary but no longer sufficient — and the gap between credential and career is widening.</p>
+          <div class="card-meta">
+            <span>📅 June 30, 2026</span>
+            <span>⏱ 7 min read</span>
+          </div>
+          <span class="card-read-link">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </a>
+
+        <a class="blog-card" href="ot-08-switching-myth.html">
+          <span class="card-series-badge">Off the Trailhead</span>
+          <h2>Everyone Is Talking About Switching from Salesforce. Almost Nobody Actually Does. Here's Why.</h2>
+          <p>The biggest outflow goes to Zoho, not HubSpot. "We're switching" is often a negotiating tactic. And the real migration cost isn't the software — it's everything else.</p>
+          <div class="card-meta">
+            <span>📅 July 2, 2026</span>
+            <span>⏱ 7 min read</span>
+          </div>
+          <span class="card-read-link">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="article-cta">
+    <div class="container">
+      <p class="cta-series-label">Ready to act?</p>
+      <h2>See How Much You Could Save</h2>
+      <p>Run the savings calculator on the main site or reach out directly — we can help you estimate your org's exposure before your next renewal.</p>
+      <div class="cta-buttons">
+        <a href="../index.html#calculator" class="btn btn-primary btn-lg">
+          Calculate My Savings
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="../index.html#contact" class="btn btn-ghost btn-lg">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="footer-brand-row">
+          <span class="logo-icon">⬡</span>
+          <span class="footer-name"><span class="logo-name">JIT License Pool</span><span class="logo-suffix">for Salesforce</span></span>
+        </div>
+        <p class="footer-tagline">Salesforce license optimization, automated.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h5>Product</h5>
+          <a href="../index.html#how-it-works">How It Works</a>
+          <a href="../index.html#chat">Chat Commands</a>
+          <a href="../index.html#calculator">Savings Calculator</a>
+          <a href="../index.html#pricing">Pricing</a>
+          <a href="../index.html#faq">FAQ</a>
+        </div>
+        <div class="footer-col">
+          <h5>Resources</h5>
+          <a href="index.html">Blog</a>
+          <a href="article-01.html">License Waste Series</a>
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <a href="../index.html#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <span>© 2026 JIT License Pool. All rights reserved.</span>
+        <span class="footer-disclaimer">
+          JIT License Pool is not affiliated with, endorsed by, or sponsored by Salesforce, Inc.
+          Salesforce® is a registered trademark of Salesforce, Inc.
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="blog-gate.js"></script>
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    });
+    document.getElementById('navBurger').addEventListener('click', () => {
+      document.getElementById('navMobile').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

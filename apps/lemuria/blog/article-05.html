@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What If Your Salesforce Licenses Managed Themselves? — JIT License Pool Blog</title>
+  <meta name="description" content="A license provisioned the moment someone needs it. Reclaimed automatically when they don't. Every departure handled. Every change logged. The audit always current — because the system maintains it." />
+  <meta name="theme-color" content="#0057FF" />
+  <meta name="release-date" content="2026-06-27">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,4 91,27 91,73 50,96 9,73 9,27' fill='%230057FF'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="blog.css" />
+  <!-- Google Tag — ID configured in analytics.js (one place to update) -->
+  <script src="../analytics.js"></script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">
+        <span class="logo-icon">⬡</span>
+        <span class="logo-text">
+          <span class="logo-name">JIT License Pool</span>
+          <span class="logo-suffix">for Salesforce</span>
+        </span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../index.html#how-it-works">How It Works</a></li>
+        <li><a href="../index.html#chat">Chat Commands</a></li>
+        <li><a href="../index.html#calculator">Calculator</a></li>
+        <li><a href="../index.html#pricing">Pricing</a></li>
+        <li><a href="../index.html#faq">FAQ</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+        <li><a href="index.html" style="color:var(--white);font-weight:700;">Blog</a></li>
+      </ul>
+      <a href="../index.html#calculator" class="btn btn-nav">Calculate Savings</a>
+      <button class="nav-burger" id="navBurger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="../index.html">← Home</a>
+      <a href="../index.html#how-it-works">How It Works</a>
+      <a href="../index.html#chat">Chat Commands</a>
+      <a href="../index.html#calculator">Calculator</a>
+      <a href="../index.html#pricing">Pricing</a>
+      <a href="../index.html#faq">FAQ</a>
+      <a href="../index.html#contact">Contact</a>
+      <a href="index.html">Blog</a>
+      <a href="../index.html#calculator" class="btn btn-primary">Calculate Savings</a>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div class="blog-breadcrumb">
+    <div class="container">
+      <a href="../index.html">Home</a>
+      <span class="sep">›</span>
+      <a href="index.html">Blog</a>
+      <span class="sep">›</span>
+      <span>Part 5 of 5 — Final</span>
+    </div>
+  </div>
+
+  <!-- ARTICLE HERO -->
+  <section class="article-hero">
+    <div class="container">
+      <div class="article-series-badge">Part 5 of 5 — The Salesforce License Waste Series · Final</div>
+      <h1>What If Your Salesforce Licenses Managed Themselves?</h1>
+      <div class="article-meta">
+        <span class="meta-chip">📅 June 27, 2026</span>
+        <span class="meta-chip">⏱ 4 min read</span>
+        <span class="meta-chip">🏷 The Solution</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE BODY -->
+  <main>
+    <div class="article-body">
+
+      <p>Here is what Salesforce license management looks like inside most organizations today.</p>
+
+      <p>Someone leaves. Their license stays. A contractor wraps up. Their account persists. A team migrates to a different platform. Their Salesforce seats go untouched. Nobody catches it until renewal — when an audit surfaces the accumulation, and by then the organization has spent months paying for access that produced nothing.</p>
+
+      <p>The problem is not carelessness. It is not a failure of attention. It is that license management is being treated as a periodic event inside a process that is continuous. Licenses follow people — through onboarding, role changes, project cycles, and departures. At any given moment, the real state of your license pool reflects a hundred individual stories playing out simultaneously across the organization. No quarterly audit can keep pace with that. No spreadsheet can track it in real time.</p>
+
+      <p>The answer is not a better audit. It is a different starting assumption.</p>
+
+      <h2>A Different Starting Assumption</h2>
+
+      <p>What if the operating principle was not "we will review who has what every quarter" but "every license should reflect current, actual usage — at all times"?</p>
+
+      <p>That single shift produces a completely different architecture for how licenses are managed.</p>
+
+      <p>Under that model:</p>
+
+      <ul>
+        <li>When a user has not logged into Salesforce in 30 days — or whatever threshold your organization sets — the system flags the inactivity automatically. Not a report to pull. Not a calendar reminder to schedule an audit. An automatic flag.</li>
+        <li>When inactivity crosses the threshold, the license is reclaimed. The seat returns to the pool, available for whoever needs it next.</li>
+        <li>When someone needs access, they request it — from the admin portal, or directly from Slack, Teams, or Google Chat — and the license is assigned in seconds. If the pool is full, the system identifies the longest-idle active seat and reclaims it automatically before assigning access.</li>
+        <li>When someone leaves, their access is released automatically — not when someone remembers to check the offboarding list three months from now, but as part of the same workflow that handles every other license state change.</li>
+        <li>When a Salesforce admin activates a user directly in Salesforce outside the system, the platform detects it, logs it to the audit trail, and fires an alert. License governance is enforced even when someone tries to work around it.</li>
+      </ul>
+
+      <div class="pull-quote">
+        The audit is always current. Not because someone ran it. Because the system maintains it continuously.
+      </div>
+
+      <h2>What This Changes</h2>
+
+      <p><strong>For the finance team:</strong> instead of a contracted seat count that reflects purchasing decisions made 18 months ago, the bill reflects what is actually being used today. The number is defensible because it is grounded in current, automated data — not historical inertia and manual estimates made under renewal deadline pressure.</p>
+
+      <p><strong>For the IT team:</strong> license management becomes a background function, not a recurring project. There is no audit to schedule, no spreadsheet to maintain, no cross-referencing of the HR roster with the usage report. The system handles it — continuously, without prompting.</p>
+
+      <p><strong>For the Salesforce users:</strong> access is available when it is needed and released when it is not. Nobody waits days for a license request to be processed. Nobody holds a seat they never use. The pool is available to the people who need it.</p>
+
+      <p><strong>For the security team:</strong> every access change is logged and traceable. There are no orphaned accounts. Former employees do not have open sessions. The access record is complete and current — not reconstructed from quarterly snapshots.</p>
+
+      <h2>The Just-in-Time Principle Applied to Licensing</h2>
+
+      <p>The concept borrows from manufacturing. In a just-in-time supply chain, inventory arrives exactly when it is needed — not held in a warehouse on the assumption it will eventually be used. The result is less waste, lower carrying cost, and a supply chain that reflects actual demand rather than forecasted demand.</p>
+
+      <p>Applied to Salesforce licensing: a seat is provisioned exactly when a user needs it. When the need ends, the seat returns. The pool adjusts continuously. The organization pays for what is being used — not for what was purchased and might get used.</p>
+
+      <p>The technology to do this already exists. The Salesforce API supports user activation and deactivation. Login activity is trackable at the platform level. Pool size is configurable. The pieces are available — what most organizations lack is the system that connects them into a continuously-operating workflow rather than a periodic manual process.</p>
+
+      <div class="stat-callout">
+        <div class="big-stat">25–40%</div>
+        <p class="stat-desc">Recovered from software spend when organizations implement continuous license management — without renegotiating a single contract.</p>
+        <p class="stat-source">Source: Zylo, Gartner, Productiv — consistent finding across multiple 2025–2026 analyses</p>
+      </div>
+
+      <h2>What Comes Next</h2>
+
+      <p>We built that system.</p>
+
+      <p>We have deliberately kept this series focused on the problem — the waste, the structural causes, the math, the limits of the quarterly audit. Not because we were reluctant to mention what we built, but because the problem deserves to be understood on its own terms before a solution enters the conversation.</p>
+
+      <p>If you have read through all five articles and found yourself thinking "this is exactly what we are dealing with," then what we have built is worth a conversation.</p>
+
+      <p>The license waste problem is not inevitable. It is structural — and structural problems have structural solutions.</p>
+
+      <hr />
+
+      <p><strong>If any of this resonated, drop a comment, reach out directly, or use the link below to see how the platform works. We would like to help.</strong></p>
+
+      <p>And if you found this series useful, share it with whoever manages your Salesforce contract. The conversation is worth having before the next renewal.</p>
+
+      <div class="article-sources">
+        <h4>Sources</h4>
+        <p>Zylo 2026 SaaS Management Index — zylo.com/2026-saas-management-index</p>
+        <p>CloudEagle Salesforce License Optimization Report, 2025 — cloudeagle.ai</p>
+        <p>Gartner SaaS Spend Forecast, 2025</p>
+        <p>Productiv SaaS Intelligence Platform, 2025 — productiv.com</p>
+        <p>Salesforce public pricing, updated August 2025 — salesforce.com/pricing</p>
+      </div>
+
+      <div class="series-nav">
+        <div class="series-nav-link">
+          <span class="series-nav-label">← Previous</span>
+          <a href="article-04.html">One Salesforce Audit. 90 Inactive Licenses Found. Here's What Happened Next.</a>
+        </div>
+        <div class="series-nav-link next">
+          <span class="series-nav-label">Read the full series →</span>
+          <a href="index.html">All 5 Articles</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- CTA — Strongest of the series -->
+  <section class="article-cta">
+    <div class="container">
+      <p class="cta-series-label">Series Complete — The Salesforce License Waste Series</p>
+      <h2>We Built the System This Series Describes.</h2>
+      <p>Just-in-time Salesforce license management — continuous, automated, and built to eliminate the waste this series has laid out. If this is a problem you are dealing with, let's talk.</p>
+      <div class="cta-buttons">
+        <a href="../index.html#how-it-works" class="btn btn-primary btn-lg">
+          See How It Works
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="../index.html#contact" class="btn btn-ghost btn-lg">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="footer-brand-row">
+          <span class="logo-icon">⬡</span>
+          <span class="footer-name"><span class="logo-name">JIT License Pool</span><span class="logo-suffix">for Salesforce</span></span>
+        </div>
+        <p class="footer-tagline">Salesforce license optimization, automated.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h5>Product</h5>
+          <a href="../index.html#how-it-works">How It Works</a>
+          <a href="../index.html#chat">Chat Commands</a>
+          <a href="../index.html#calculator">Savings Calculator</a>
+          <a href="../index.html#pricing">Pricing</a>
+          <a href="../index.html#faq">FAQ</a>
+        </div>
+        <div class="footer-col">
+          <h5>Resources</h5>
+          <a href="index.html">Blog</a>
+          <a href="article-01.html">License Waste Series</a>
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <a href="../index.html#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <span>© 2026 JIT License Pool. All rights reserved.</span>
+        <span class="footer-disclaimer">
+          JIT License Pool is not affiliated with, endorsed by, or sponsored by Salesforce, Inc.
+          Salesforce® is a registered trademark of Salesforce, Inc.
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="blog-gate.js"></script>
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    });
+    document.getElementById('navBurger').addEventListener('click', () => {
+      document.getElementById('navMobile').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

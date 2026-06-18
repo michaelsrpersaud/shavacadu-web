@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>We Ran the Math on Salesforce License Waste. The Number Will Make Your Finance Team Uncomfortable. — JIT License Pool Blog</title>
+  <meta name="description" content="Three inputs. A formula anyone can run. At a 35% idle rate and Enterprise pricing, a 500-seat org is wasting over $256,000 a year — before Permission Set Licenses are counted." />
+  <meta name="theme-color" content="#0057FF" />
+  <meta name="release-date" content="2026-06-23">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,4 91,27 91,73 50,96 9,73 9,27' fill='%230057FF'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="blog.css" />
+  <!-- Google Tag — ID configured in analytics.js (one place to update) -->
+  <script src="../analytics.js"></script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">
+        <span class="logo-icon">⬡</span>
+        <span class="logo-text">
+          <span class="logo-name">JIT License Pool</span>
+          <span class="logo-suffix">for Salesforce</span>
+        </span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../index.html#how-it-works">How It Works</a></li>
+        <li><a href="../index.html#chat">Chat Commands</a></li>
+        <li><a href="../index.html#calculator">Calculator</a></li>
+        <li><a href="../index.html#pricing">Pricing</a></li>
+        <li><a href="../index.html#faq">FAQ</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+        <li><a href="index.html" style="color:var(--white);font-weight:700;">Blog</a></li>
+      </ul>
+      <a href="../index.html#calculator" class="btn btn-nav">Calculate Savings</a>
+      <button class="nav-burger" id="navBurger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="../index.html">← Home</a>
+      <a href="../index.html#how-it-works">How It Works</a>
+      <a href="../index.html#chat">Chat Commands</a>
+      <a href="../index.html#calculator">Calculator</a>
+      <a href="../index.html#pricing">Pricing</a>
+      <a href="../index.html#faq">FAQ</a>
+      <a href="../index.html#contact">Contact</a>
+      <a href="index.html">Blog</a>
+      <a href="../index.html#calculator" class="btn btn-primary">Calculate Savings</a>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div class="blog-breadcrumb">
+    <div class="container">
+      <a href="../index.html">Home</a>
+      <span class="sep">›</span>
+      <a href="index.html">Blog</a>
+      <span class="sep">›</span>
+      <span>Part 3 of 5</span>
+    </div>
+  </div>
+
+  <!-- ARTICLE HERO -->
+  <section class="article-hero">
+    <div class="container">
+      <div class="article-series-badge">Part 3 of 5 — The Salesforce License Waste Series</div>
+      <h1>We Ran the Math on Salesforce License Waste. The Number Will Make Your Finance Team Uncomfortable.</h1>
+      <div class="article-meta">
+        <span class="meta-chip">📅 June 23, 2026</span>
+        <span class="meta-chip">⏱ 5 min read</span>
+        <span class="meta-chip">🏷 Cost Analysis</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE BODY -->
+  <main>
+    <div class="article-body">
+
+      <p>The formula is deceptively simple. Most organizations have never applied it.</p>
+
+      <p style="background:var(--off-white);border:2px solid var(--border);border-radius:var(--radius);padding:1.25rem 1.5rem;font-family:monospace;font-size:1rem;color:var(--navy);font-weight:600;letter-spacing:-.01em;">
+        Annual waste = Total seats × Idle rate × Monthly cost per seat × 12
+      </p>
+
+      <p>Three inputs. The result, for most mid-to-large organizations, is a number large enough to prompt an immediate conversation with whoever owns the Salesforce budget.</p>
+
+      <h2>Establishing Your Inputs</h2>
+
+      <p><strong>Total seats</strong> is your contracted Salesforce user count — the number of licenses you are paying for, regardless of how many people are actively using the platform. This is in your contract.</p>
+
+      <p><strong>Idle rate</strong> is the percentage of those licenses held by users who are not actively logging in. Zylo's 2026 SaaS Management Index puts the enterprise range at 36 to 43 percent. Salesforce-specific data from CloudEagle puts it higher — only 47 percent of licenses are actively used, implying a 53 percent idle rate. If you have never run a usage analysis, 35 percent is a conservative starting point. If your organization has gone through restructuring or rapid hiring in the past 12 months, the real number may be considerably higher.</p>
+
+      <p><strong>Monthly cost per seat</strong> depends on your tier and negotiated discount. Following Salesforce's August 2025 price increase, Enterprise is listed at $175 per user per month. Unlimited is $350. Most enterprises negotiate 20 to 40 percent below list — a reasonable working figure for Enterprise at 30 percent off is approximately $122 per seat per month.</p>
+
+      <h2>The Numbers at Scale</h2>
+
+      <p>Applying these inputs across different org sizes produces the following annual waste estimates at Enterprise pricing with a 30 percent negotiated discount ($122/seat/month):</p>
+
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Org Size</th>
+              <th>Idle Rate</th>
+              <th>Idle Seats</th>
+              <th>Monthly Waste</th>
+              <th>Annual Waste</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>100 seats</td>
+              <td>35%</td>
+              <td>35</td>
+              <td class="amt">$4,270</td>
+              <td class="amt">$51,240</td>
+            </tr>
+            <tr>
+              <td>250 seats</td>
+              <td>35%</td>
+              <td>87</td>
+              <td class="amt">$10,614</td>
+              <td class="amt">$127,370</td>
+            </tr>
+            <tr class="row-highlight">
+              <td>500 seats</td>
+              <td>35%</td>
+              <td>175</td>
+              <td class="amt">$21,350</td>
+              <td class="amt-warn">$256,200</td>
+            </tr>
+            <tr>
+              <td>1,000 seats</td>
+              <td>35%</td>
+              <td>350</td>
+              <td class="amt">$42,700</td>
+              <td class="amt-warn">$512,400</td>
+            </tr>
+            <tr>
+              <td>2,500 seats</td>
+              <td>35%</td>
+              <td>875</td>
+              <td class="amt">$106,750</td>
+              <td class="amt-warn">$1,281,000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-caption">Based on Salesforce Enterprise at 30% negotiated discount ($122/seat/month) and a 35% idle rate — a conservative industry estimate.</p>
+
+      <p>These are not worst-case projections. They apply the industry-average idle rate to a standard enterprise discount. At any org above 250 seats, the annual waste is material enough to carry its own line in a budget review — if anyone is tracking it.</p>
+
+      <p>If your org is on Unlimited, run the same math at $245 per seat per month (30% off $350). The figures approximately double.</p>
+
+      <h2>What the Research Says About Recovery</h2>
+
+      <p>According to consistent findings from Zylo, Gartner, and Productiv, organizations that implement systematic license management recover between 25 and 40 percent of their SaaS spend through reclamation and rightsizing. Not from renegotiating contracts or switching platforms — from stopping payment on access that was already idle.</p>
+
+      <div class="stat-callout stat-callout-green">
+        <div class="big-stat">$220K+</div>
+        <p class="stat-desc">Potential annual recovery for a 500-seat Enterprise org at a 30% reclamation rate — without renegotiating the contract or switching platforms.</p>
+        <p class="stat-source">Based on Zylo/Gartner recovery rate estimates applied to $735K list-price spend</p>
+      </div>
+
+      <p>Gartner's projection that organizations without centralized SaaS license management will overspend by 25 percent through 2028 is not a forecast about what might happen. It is a description of what is currently happening at organizations that rely on periodic reviews to manage a continuous process.</p>
+
+      <h2>The Permission Set License Layer Nobody Talks About</h2>
+
+      <p>The base license cost is not the full picture. Salesforce sells Permission Set Licenses (PSLs) for add-on products — Einstein Analytics, Revenue Intelligence, Tableau CRM — billed separately on top of the base user license.</p>
+
+      <p>Research from CloudEagle found that 30 to 40 percent of PSLs are assigned to users who have never accessed the features they unlock. A single Einstein Analytics Plus PSL is priced at $75 per user per month.</p>
+
+      <p>In a 500-seat org where 200 users have Einstein PSLs assigned and 35 percent never use them: 70 PSLs × $75 = <strong>$5,250 per month in PSL waste alone</strong> — $63,000 per year on top of the base license figure above.</p>
+
+      <p>PSLs are rarely surfaced in standard license audits because they sit below the main user license layer. They accumulate the same way base licenses do: assigned on request, never reviewed.</p>
+
+      <h2>Running the Number for Your Organization</h2>
+
+      <p>Three questions to answer before your next renewal:</p>
+
+      <ol>
+        <li>How many Salesforce seats are you contracted for?</li>
+        <li>When did you last pull a last-login report and cross-reference it with your current employee roster?</li>
+        <li>Do you know how many PSLs are assigned in your org, and to whom?</li>
+      </ol>
+
+      <p>If the answer to question 2 is "at our last renewal" and the answer to question 3 is uncertain, applying 35 percent to your seat count and monthly cost gives you a conservative estimate of the gap. Most organizations run this calculation for the first time during a renewal conversation — which is the worst possible moment to discover the number, because by then there is very little time to act on it.</p>
+
+      <h2>What Changes When You Act Before Renewal</h2>
+
+      <p>Organizations that identify and reclaim idle licenses ahead of renewal arrive at the negotiating table with current, documented data. They know exactly which seats are active, which are idle, and what the correct contracted count should be.</p>
+
+      <p>That position changes the conversation from defending a historical number to presenting a current one. Vendors negotiate differently when the customer can demonstrate real usage data — not assumptions, not prior-year counts, but a live report of who has logged in and when.</p>
+
+      <div class="pull-quote">
+        The organizations that wait for renewal to run this exercise are the ones accepting renewals at or above the prior-term count — because without usage data, there is no defensible argument for reduction.
+      </div>
+
+      <hr />
+
+      <p>In the next article: a walk-through of what happens when an actual Salesforce license audit is run — what it finds, what the remediation looks like, and why a one-time audit almost always fails to prevent the next accumulation cycle.</p>
+
+      <p><strong>Drop a comment with your seat count and we will help you estimate your number. Follow along for Part 4.</strong></p>
+
+      <div class="article-sources">
+        <h4>Sources</h4>
+        <p>Zylo 2026 SaaS Management Index — zylo.com/2026-saas-management-index</p>
+        <p>CloudEagle Salesforce License Optimization Report, 2025 — cloudeagle.ai</p>
+        <p>Gartner SaaS Spend Forecast, 2025</p>
+        <p>Productiv SaaS Intelligence Platform, 2025 — productiv.com</p>
+        <p>Salesforce public pricing, updated August 2025 — salesforce.com/pricing</p>
+      </div>
+
+      <div class="series-nav">
+        <div class="series-nav-link">
+          <span class="series-nav-label">← Previous</span>
+          <a href="article-02.html">Salesforce License Sprawl Is Not a Budget Problem. It's a Visibility Problem.</a>
+        </div>
+        <div class="series-nav-link next">
+          <span class="series-nav-label">Next in series →</span>
+          <a href="article-04.html">One Salesforce Audit. 90 Inactive Licenses Found. Here's What Happened Next.</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- CTA -->
+  <section class="article-cta">
+    <div class="container">
+      <p class="cta-series-label">Part 3 of 5 — The Salesforce License Waste Series</p>
+      <h2>Want to Run the Math on Your Own Org?</h2>
+      <p>Use the savings calculator on our main site — or drop a comment with your seat count and we will run the estimate for you.</p>
+      <div class="cta-buttons">
+        <a href="../index.html#calculator" class="btn btn-primary btn-lg">Open Calculator <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="article-04.html" class="btn btn-ghost btn-lg">Read Part 4</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="footer-brand-row">
+          <span class="logo-icon">⬡</span>
+          <span class="footer-name"><span class="logo-name">JIT License Pool</span><span class="logo-suffix">for Salesforce</span></span>
+        </div>
+        <p class="footer-tagline">Salesforce license optimization, automated.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h5>Product</h5>
+          <a href="../index.html#how-it-works">How It Works</a>
+          <a href="../index.html#chat">Chat Commands</a>
+          <a href="../index.html#calculator">Savings Calculator</a>
+          <a href="../index.html#pricing">Pricing</a>
+          <a href="../index.html#faq">FAQ</a>
+        </div>
+        <div class="footer-col">
+          <h5>Resources</h5>
+          <a href="index.html">Blog</a>
+          <a href="article-01.html">License Waste Series</a>
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <a href="../index.html#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <span>© 2026 JIT License Pool. All rights reserved.</span>
+        <span class="footer-disclaimer">
+          JIT License Pool is not affiliated with, endorsed by, or sponsored by Salesforce, Inc.
+          Salesforce® is a registered trademark of Salesforce, Inc.
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="blog-gate.js"></script>
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    });
+    document.getElementById('navBurger').addEventListener('click', () => {
+      document.getElementById('navMobile').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

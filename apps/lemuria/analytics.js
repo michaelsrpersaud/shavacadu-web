@@ -1,23 +1,17 @@
-// ─── LemurIA Analytics & Cookie Consent ───────────────────────────────────
+// ─── LemurIA Cookie Consent + GA Consent Mode v2 ─────────────────────────
 //
-// TO ACTIVATE:
-//   Replace the GA_ID below with your real Measurement ID from Google Analytics.
-//   Google Analytics → Admin → Data Streams → your stream → Measurement ID
-//   It looks like: G-XXXXXXXXXX
+// The GA script tag itself lives statically in <head> of every page
+// (required for Google's tag detection). This file manages consent state
+// and calls gtag('consent', 'update', ...) to grant or deny data collection.
 //
-// This script:
-//   1. Checks stored consent on every page load.
-//   2. If already accepted  → loads GA immediately, no banner.
-//   3. If already declined  → does nothing, no banner.
-//   4. If no decision yet   → injects the consent banner.
-//
-// GDPR / App Store compliance: GA is never loaded before explicit acceptance.
-// ────────────────────────────────────────────────────────────────────────────
+// Behaviour:
+//   First visit        → show banner; GA script present but analytics_storage=denied
+//   Accept             → update consent to granted; GA starts collecting
+//   Decline            → consent stays denied; GA script present but collects nothing
+//   Return visit       → read localStorage; silently grant or deny; no banner
+// ─────────────────────────────────────────────────────────────────────────────
 
-const GA_ID       = 'G-9VG9S9RL0W';   // ← replace this
-const CONSENT_KEY = 'lemuria_cookie_consent';  // localStorage key
-
-// ── Consent helpers ──────────────────────────────────────────────────────────
+const CONSENT_KEY = 'lemuria_cookie_consent';
 
 function getConsent() {
   try { return localStorage.getItem(CONSENT_KEY); } catch (e) { return null; }
@@ -27,24 +21,13 @@ function saveConsent(value) {
   try { localStorage.setItem(CONSENT_KEY, value); } catch (e) {}
 }
 
-// ── GA loader ────────────────────────────────────────────────────────────────
-
-function loadGA() {
-  if (window._gaLoaded || GA_ID === 'G-9VG9S9RL0W') return;
-  window._gaLoaded = true;
-
-  const s = document.createElement('script');
-  s.src   = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
-  s.async = true;
-  document.head.appendChild(s);
-
-  window.dataLayer = window.dataLayer || [];
-  window.gtag = function () { window.dataLayer.push(arguments); };
-  window.gtag('js', new Date());
-  window.gtag('config', GA_ID, { anonymize_ip: true });
+function grantAnalytics() {
+  if (typeof window.gtag === 'function') {
+    window.gtag('consent', 'update', { analytics_storage: 'granted' });
+  }
 }
 
-// ── Banner styles (injected once) ────────────────────────────────────────────
+// ── Banner styles ─────────────────────────────────────────────────────────────
 
 const BANNER_CSS = `
   #lm-cookie-banner {
@@ -144,12 +127,13 @@ function injectBanner() {
   document.getElementById('lm-accept').addEventListener('click', function () {
     saveConsent('accepted');
     banner.remove();
-    loadGA();
+    grantAnalytics();
   });
 
   document.getElementById('lm-decline').addEventListener('click', function () {
     saveConsent('declined');
     banner.remove();
+    // analytics_storage stays 'denied' — nothing to update
   });
 }
 
@@ -159,7 +143,7 @@ function injectBanner() {
   const consent = getConsent();
 
   if (consent === 'accepted') {
-    loadGA();
+    grantAnalytics();
     return;
   }
 

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<style>
+  html, body { margin: 0; padding: 0; background: transparent; }
+  /* Square canvas — the ECHO mark centered with a little transparent padding. */
+  .canvas {
+    width: 600px; height: 600px;
+    display: flex; align-items: center; justify-content: center;
+  }
+</style>
+</head>
+<body>
+  <div class="canvas">
+    <svg viewBox="0 0 240 240" width="520" height="520" aria-label="LemurIA ECHO mark">
+      <!-- radial ECHO wave: four rings in the pillar colours emanating from a point -->
+      <circle cx="120" cy="120" r="104" fill="none" stroke="#7E72E6" stroke-width="7" opacity="0.7"/>
+      <circle cx="120" cy="120" r="80"  fill="none" stroke="#D4537E" stroke-width="7" opacity="0.8"/>
+      <circle cx="120" cy="120" r="56"  fill="none" stroke="#1D9E75" stroke-width="7" opacity="0.9"/>
+      <circle cx="120" cy="120" r="32"  fill="none" stroke="#EF9F27" stroke-width="7"/>
+      <circle cx="120" cy="120" r="11"  fill="#EF9F27"/>
+    </svg>
+  </div>
+</body>
+</html>

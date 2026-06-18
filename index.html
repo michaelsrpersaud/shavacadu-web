@@ -59,7 +59,6 @@
             display: flex;
             justify-content: space-between;
             margin: 40px 0;
-            /* flex-wrap: wrap; /* Ensure wrapping on smaller screens */
         }
         .feature {
             flex: 1;
@@ -77,17 +76,22 @@
             background-size: cover;
             background-position: center;
         }
-        /* Apply the background image for the first feature icon */
-        .feature:nth-child(1) .feature-icon {
-            background-image: url('./apps/self-control.png');
+        /* Each feature icon gets its own image via a modifier class.
+           Position-based :nth-child selectors aren't reliable here because
+           some features are wrapped in <a> tags and split across rows. */
+        .icon-positivity {
+            background-image: url('./apps/positivityapps/self-control.png');
         }
-        .feature:nth-child(2) .feature-icon {
-            background-image: url('./images/memory.png');
+        .icon-lemuria {
+            background-image: url('./images/lemuria.png');
         }
-        .feature:nth-child(3) .feature-icon {
+        .icon-inclinatio {
+            background-image: url('./images/coming-soon.png');
+        }
+        .icon-governance {
             background-image: url('./images/governance.png');
         }
-        .feature:nth-child(4) .feature-icon {
+        .icon-ultrarunner {
             background-image: url('UltraRunner_playstore.png');
         }
         .centered-text {
@@ -197,38 +201,48 @@
         </div>
 
         <div class="features">
-          <a href="./apps/" style="text-decoration: none; color: inherit;">
+          <a href="./apps/positivityapps/" style="text-decoration: none; color: inherit;">
             <div class="feature">
-                <div class="feature-icon"></div>
-                <h3>Positivity App<img src="./images/live.png" width="30" /></h3>
-                <p>Measure your positivity.</p>
+              <div class="feature-icon icon-positivity"></div>
+              <h3>Positivity App<img src="./images/live.png" width="30" /></h3>
+              <p>Measure your positivity.</p>
+            </div>
+          </a>
+          <a href="./apps/lemuria/" style="text-decoration: none; color: inherit;">
+            <div class="feature">
+              <div class="feature-icon icon-lemuria"></div>
+              <h3>LemurIA<img src="./images/lemuria.png" width="30" /></h3>
+              <p>Your soul has a sound, lets help you find it [not a meditation app].</p>
             </div>
           </a>
           <div class="feature">
-            <div class="feature-icon"></div>
+            <div class="feature-icon icon-inclinatio"></div>
             <h3>Inclinatio<img src="./images/coming-soon.png" width="30" /></h3>
-            <p>A web plugin that analyzes news articles for truthfulness and bias</p>
+            <p>A web plugin that analyzes news articles for truthfulness and bias.</p>
+          </div>
         </div>
+
+        <div class="features">
           <div class="feature">
-                <div class="feature-icon"></div>
-                <h3>Governance<img src="./images/coming-soon.png" width="30" /></h3>
-                <p>A tool to provide governance in the enterprise.</p>
-            </div>
-            <div class="feature">
-                <div class="feature-icon"></div>
-                <h3>UltrRunner<img src="./images/coming-soon.png" width="30" /></h3>
-                <p>Where running meets your lifestyle [coming soon].</p>
-            </div>
+            <div class="feature-icon icon-governance"></div>
+            <h3>Governance<img src="./images/coming-soon.png" width="30" /></h3>
+            <p>A tool to provide governance in the enterprise.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon icon-ultrarunner"></div>
+            <h3>UltraRunner<img src="./images/coming-soon.png" width="30" /></h3>
+            <p>Where running meets your lifestyle [coming soon].</p>
+          </div>
         </div>
 
         <div class="centered-text">
             <span>
               <h3 class="centered-blog-text">Blog.</h3>
               <div class="centered-blog-ptext">
-                <p>Effects of Negative Content on Mental Health - <a href="../blog/Effects of Negative Content on Mental Health">view here</a></p>
-                <p>Shaping Perceptions and Emotions - <a href="../blog/Shaping Perceptions and Emotions">view here</a></p>
-                <p>Long-term effects of excessive digital technology usage on adolescent mental health - <a href="../blog/long-term effects of excessive digital technology usage on adolescent mental health">view here</a></p>
-                <p>Excessive digital technology usage affect adolescent emotions - <a href="../blog/excessive digital technology usage affect adolescent emotions">view here</a></p>
+                <p>Effects of Negative Content on Mental Health - <a href="./blog/Effects of Negative Content on Mental Health">view here</a></p>
+                <p>Shaping Perceptions and Emotions - <a href="./blog/Shaping Perceptions and Emotions">view here</a></p>
+                <p>Long-term effects of excessive digital technology usage on adolescent mental health - <a href="./blog/long-term effects of excessive digital technology usage on adolescent mental health">view here</a></p>
+                <p>Excessive digital technology usage affect adolescent emotions - <a href="./blog/excessive digital technology usage affect adolescent emotions">view here</a></p>
               </div>
             </span>
         </div>
@@ -241,7 +255,7 @@
 
         <div class="split-content">
             <div class="split-item" style="background-color: #4CAF50;">
-                <a href="./apps/" style="color: white; text-decoration: none;">
+                <a href="./apps/positivityapps/" style="color: white; text-decoration: none;">
                     <p>Positivity App!</p>
                 </a>
             </div>
@@ -259,10 +273,10 @@
             <h3><a href="./apps">Apps</a></h3>
           </div>
           <div class="footer-section">
-            <h3><a href="../aboutus.html">About Us</a></h3>
+            <h3><a href="./aboutus.html">About Us</a></h3>
           </div>
             <div class="footer-section">
-                <h3><a href="./apps/help.html">Contact Us</a></h3>
+                <h3><a href="./apps/positivityapps/help.html">Contact Us</a></h3>
             </div>
         </div>
     </footer>

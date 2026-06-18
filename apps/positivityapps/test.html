@@ -3,7 +3,7 @@
   <title>Test</title>
   <!-- Placeholder for the rest of the head content -->
   <script>
-      fetch('../apps/head-include.html')
+      fetch('../positivityapps/head-include.html')
           .then(response => response.text())
           .then(data => {
               const head = document.getElementsByTagName('head')[0];
@@ -26,7 +26,7 @@
   <div id="header-placeholder"></div>
 
   <script>
-      fetch('../apps/header.html')
+      fetch('../positivityapps/header.html')
           .then(response => response.text())
           .then(data => {
               document.getElementById('header-placeholder').innerHTML = data;
@@ -44,7 +44,7 @@
   </script>
 
   <!-- Include the centralized script -->
-  <script src="../apps/webstorelink.js"></script>
+  <script src="../positivityapps/webstorelink.js"></script>
   <!-- End header -->
 
     <!-- Page-specific content -->
@@ -61,7 +61,7 @@
     <div id="footer-placeholder"></div>
 
     <script>
-        fetch('../apps/footer.html')
+        fetch('../positivityapps/footer.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('footer-placeholder').innerHTML = data;

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet" />
+<style>
+  html, body { margin: 0; padding: 0; background: transparent; }
+  /* Fixed canvas — the logo sits centered with transparent padding. */
+  .canvas {
+    width: 1600px; height: 500px;
+    display: flex; align-items: center; justify-content: center;
+    gap: 44px;
+  }
+  .mark { flex: 0 0 auto; }
+  .word {
+    font-family: 'Marcellus', Georgia, serif;
+    font-size: 188px; line-height: 1; letter-spacing: 2px;
+    color: var(--text, #0D0D14);
+    white-space: nowrap;
+  }
+  .ia { color: #EF9F27; }
+  body.light .word { --text: #F7F5F0; }
+</style>
+</head>
+<body>
+  <div class="canvas">
+    <span class="mark" aria-hidden="true">
+      <svg viewBox="0 0 240 240" width="240" height="240">
+        <!-- radial ECHO wave: four rings in the pillar colours emanating from a point -->
+        <circle cx="120" cy="120" r="104" fill="none" stroke="#7E72E6" stroke-width="7" opacity="0.7"/>
+        <circle cx="120" cy="120" r="80"  fill="none" stroke="#D4537E" stroke-width="7" opacity="0.8"/>
+        <circle cx="120" cy="120" r="56"  fill="none" stroke="#1D9E75" stroke-width="7" opacity="0.9"/>
+        <circle cx="120" cy="120" r="32"  fill="none" stroke="#EF9F27" stroke-width="7"/>
+        <circle cx="120" cy="120" r="11"  fill="#EF9F27"/>
+      </svg>
+    </span>
+    <span class="word">Lemur<span class="ia">IA</span></span>
+  </div>
+  <script>
+    // ?variant=light flips the wordmark to warm-white for dark backgrounds.
+    const v = new URLSearchParams(location.search).get('variant');
+    if (v === 'light') document.body.classList.add('light');
+  </script>
+</body>
+</html>

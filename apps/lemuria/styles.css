@@ -113,8 +113,27 @@ body {
   padding: 11px 20px; border-radius: 14px; text-decoration: none;
   border: 1px solid transparent; transition: transform .15s, box-shadow .2s, background .2s;
   box-shadow: 0 6px 20px rgba(0,0,0,.25);
+  position: relative; overflow: hidden;
 }
 .store-badge:hover { transform: translateY(-2px); background: #fff; box-shadow: 0 10px 28px rgba(0,0,0,.32); }
+
+/* Coming-soon ribbon — top-right corner diagonal stamp */
+.store-badge.ios-soon::after {
+  content: 'Coming Soon';
+  position: absolute;
+  top: 9px; right: -22px;
+  width: 88px;
+  background: var(--open);
+  color: var(--ink);
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 3px 0;
+  transform: rotate(35deg);
+  pointer-events: none;
+}
 .store-ico { width: 26px; height: 26px; flex-shrink: 0; }
 .store-text { display: flex; flex-direction: column; line-height: 1.1; text-align: left; }
 .store-text small { font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-soft); }

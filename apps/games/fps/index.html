@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zombie Shooter FPS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Start Screen -->
+    <div id="start-screen">
+        <h1>☠️ ZOMBIE OUTBREAK ☠️</h1>
+        <p class="subtitle">Survive the horde</p>
+        
+        <div class="weapon-select">
+            <h2>Choose Your Starting Weapon</h2>
+            <div class="weapons-grid">
+                <div class="weapon-card selected" data-weapon="pistol">
+                    <div class="weapon-icon">🔫</div>
+                    <h3>Pistol</h3>
+                    <div class="weapon-stats">
+                        <span>DMG: ███░░</span>
+                        <span>FIRE: ██░░░</span>
+                        <span>KICK: █░░░░</span>
+                    </div>
+                </div>
+                <div class="weapon-card" data-weapon="shotgun">
+                    <div class="weapon-icon">💥</div>
+                    <h3>Shotgun</h3>
+                    <div class="weapon-stats">
+                        <span>DMG: █████</span>
+                        <span>FIRE: █░░░░</span>
+                        <span>KICK: ████░</span>
+                    </div>
+                </div>
+                <div class="weapon-card" data-weapon="smg">
+                    <div class="weapon-icon">🔫</div>
+                    <h3>SMG</h3>
+                    <div class="weapon-stats">
+                        <span>DMG: ██░░░</span>
+                        <span>FIRE: █████</span>
+                        <span>KICK: ██░░░</span>
+                    </div>
+                </div>
+                <div class="weapon-card" data-weapon="rifle">
+                    <div class="weapon-icon">🎯</div>
+                    <h3>Rifle</h3>
+                    <div class="weapon-stats">
+                        <span>DMG: ████░</span>
+                        <span>FIRE: ███░░</span>
+                        <span>KICK: ███░░</span>
+                    </div>
+                </div>
+                <div class="weapon-card" data-weapon="knife">
+                    <div class="weapon-icon">🔪</div>
+                    <h3>Knife</h3>
+                    <div class="weapon-stats">
+                        <span>DMG: ███░░</span>
+                        <span>SPD: ████░</span>
+                        <span>RNG: █░░░░</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <button id="start-btn">▶ START GAME</button>
+        <p class="controls-hint">WASD: Move | Space: Jump | C/Ctrl: Crouch | Mouse: Look | Click: Shoot | R: Reload | 1-5 or Q/E: Switch Weapon | F: Track Zombies | ESC: Pause</p>
+    </div>
+
+    <!-- Game Canvas -->
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- HUD -->
+    <div id="hud" class="hidden">
+        <div id="health-bar">
+            <div id="health-fill"></div>
+            <span id="health-text">100</span>
+        </div>
+        
+        <div id="crosshair">
+            <div class="ch-line ch-top"></div>
+            <div class="ch-line ch-right"></div>
+            <div class="ch-line ch-bottom"></div>
+            <div class="ch-line ch-left"></div>
+            <div class="ch-dot"></div>
+        </div>
+        
+        <div id="weapon-hud">
+            <div id="weapon-name">PISTOL</div>
+            <div id="ammo-display">
+                <span id="ammo-current">12</span> / <span id="ammo-reserve">60</span>
+            </div>
+        </div>
+        
+        <div id="score-display">
+            <span>KILLS: </span><span id="kill-count">0</span>
+        </div>
+        
+        <!-- Wave info panel -->
+        <div id="wave-panel">
+            <div id="wave-display">WAVE: <span id="wave-number">1</span></div>
+            <div id="wave-progress">
+                <div id="wave-progress-fill"></div>
+            </div>
+            <div id="wave-detail">
+                <span id="zombies-killed-count">0</span> / <span id="zombies-total-count">8</span> killed
+            </div>
+            <div id="zombies-alive">
+                🧟 Alive: <span id="zombies-alive-count">0</span>
+            </div>
+            <div id="zombies-remaining">
+                📦 Incoming: <span id="zombies-incoming-count">0</span>
+            </div>
+            <div id="track-hint">
+                [F] Track Zombies
+            </div>
+        </div>
+        
+        <!-- Weapon slots bar -->
+        <div id="weapon-slots">
+            <div class="slot active" data-slot="1">1: Pistol</div>
+            <div class="slot" data-slot="2">2: Shotgun</div>
+            <div class="slot" data-slot="3">3: SMG</div>
+            <div class="slot" data-slot="4">4: Rifle</div>
+            <div class="slot" data-slot="5">5: Knife</div>
+        </div>
+
+        <!-- Weapon switch hint -->
+        <div id="weapon-switch-hint">Q ◀ prev | next ▶ E</div>
+        
+        <div id="hit-marker" class="hidden">✕</div>
+        <div id="headshot-marker" class="hidden">☠ HEADSHOT</div>
+        <div id="damage-overlay"></div>
+        <div id="reload-indicator" class="hidden">RELOADING...</div>
+        <div id="stance-indicator">STANDING</div>
+
+        <!-- Wave complete banner -->
+        <div id="wave-complete-banner" class="hidden">
+            <div class="banner-text">WAVE <span id="wave-complete-num">1</span> COMPLETE!</div>
+            <div class="banner-sub">Next wave incoming...</div>
+        </div>
+
+        <!-- Zombie tracker overlay -->
+        <div id="tracker-overlay" class="hidden">
+            <div id="tracker-title">🔍 ZOMBIE TRACKER</div>
+            <div id="tracker-list"></div>
+            <div id="tracker-footer">Press F again to close | Click number to target</div>
+        </div>
+
+        <!-- Directional tracker arrows (rendered on screen edges) -->
+        <div id="tracker-arrows"></div>
+
+        <!-- Tracker ping text -->
+        <div id="tracker-ping" class="hidden">TRACKING ACTIVATED</div>
+    </div>
+
+    <!-- Pause Screen -->
+    <div id="pause-screen" class="hidden">
+        <h2>PAUSED</h2>
+        <button id="resume-btn">Resume</button>
+        <button id="quit-btn">Quit to Menu</button>
+    </div>
+
+    <!-- Game Over Screen -->
+    <div id="gameover-screen" class="hidden">
+        <h1>YOU DIED</h1>
+        <p>Kills: <span id="final-kills">0</span></p>
+        <p>Headshots: <span id="final-headshots">0</span></p>
+        <p>Wave Reached: <span id="final-wave">1</span></p>
+        <button id="restart-btn">Play Again</button>
+    </div>
+
+    <!-- Muzzle Flash -->
+    <div id="muzzle-flash" class="hidden"></div>
+
+    <script src="game.js"></script>
+</body>
+</html>
